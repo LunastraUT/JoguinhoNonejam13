@@ -1,0 +1,1 @@
+global.collisions = [obj_colisor]
