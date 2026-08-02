@@ -1,3 +1,3 @@
-if sprite_index == noone {exit}
+ if sprite_index == noone {exit}
 
 draw()

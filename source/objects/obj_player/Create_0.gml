@@ -1,7 +1,5 @@
- // Inherit the parent event
+// Inherit the parent event
 event_inherited();
-
-spd = 6
 
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)

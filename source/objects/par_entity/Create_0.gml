@@ -3,6 +3,8 @@ take_damage = function(_damage) {
 	return true;
 }
 
+skew = 0
+
 //Fisica
 	//Speed
 	final_hsp = 0
@@ -11,10 +13,10 @@ take_damage = function(_damage) {
 	hsp = 0
 	vsp = 0
 
-	spd = 3
+	spd = 2
 
 	//Jump
-	j_height = 11
+	j_height = 5
 	grav = 0.45
 	grav_mult = 1
 	gravit = 1
@@ -43,6 +45,7 @@ update_air_physics = function() {
 //
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
+	//draw_sprite_pos(sprite_index, image_index, x+skew, y-sprite_height, (x+sprite_width)+skew, y-sprite_height, x+sprite_width, y, x, y, _alpha)
 	draw_sprite_ext(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, _blend, _alpha)
 }
 
