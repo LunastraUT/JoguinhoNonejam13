@@ -12,9 +12,9 @@ skew = 0
 	
 	hsp = 0
 	vsp = 0
-
-	spd = 2
-
+	
+	spd_max = 2
+	spd = 1
 	//Jump
 	j_height = 5
 	grav = 0.45

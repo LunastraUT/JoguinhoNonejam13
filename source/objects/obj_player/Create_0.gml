@@ -1,6 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
+accel = 0
+
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)
 	camera.target = self
@@ -24,8 +26,14 @@ function updateCollision() {
 }
 
 function move() {
-	var _moveSpd = MOVE_H*spd
+	if MOVE_H != 0 {
+		spd_max = 2	
+	} else {spd_max = 0}
 	
+	spd = lerp(spd, spd_max, 0.1)
+	
+	var _moveSpd = MOVE_H*spd
+
 	hsp = _moveSpd
 	
 	updateLooking()
