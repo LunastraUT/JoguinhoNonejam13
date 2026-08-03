@@ -12,9 +12,9 @@ skew = 0
 	
 	hsp = 0
 	vsp = 0
-	
-	spd_max = 2
-	spd = 1
+
+	spd = 2
+
 	//Jump
 	j_height = 5
 	grav = 0.45
@@ -45,7 +45,8 @@ update_air_physics = function() {
 //
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
-	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
+	//draw_sprite_pos(sprite_index, image_index, x+skew, y-sprite_height, (x+sprite_width)+skew, y-sprite_height, x+sprite_width, y, x, y, _alpha)
+	draw_sprite_ext(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, _blend, _alpha)
 }
 
 //Animation
