@@ -3,8 +3,8 @@ event_inherited();
 
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)
-	//camera.target = self
-	//camera.fix_pos()
+	camera.target = self
+	camera.fix_pos()
 //
 
 #macro MOVE_H (INPUT_RIGHT - INPUT_LEFT)

@@ -72,3 +72,28 @@ function spawnParticles(_x = x, _y = y, _typeOrSingle, _amount, _externVar = noo
 	{_manager.type_particles(_x, _y, _typeOrSingle, _amount, _externVar)} else
 	{_manager.spawn_particle(_typeOrSingle, _x, _y)}
 }
+
+function draw_sprite_ext_skew(_spr, _fram, _x, _y, _xscale, _yscale, _angle, _skew, _blend, _alpha) {
+    var _offX = sprite_get_xoffset(_spr)
+    var _offY = sprite_get_yoffset(_spr)
+
+    var _sprWidth = sprite_get_width(_spr) * _xscale
+    var _sprHeight = sprite_get_height(_spr) * _yscale
+
+    var _left   = _x - _offX * _xscale
+    var _up    = _y - _offY * _yscale
+    var _right  = _left + _sprWidth
+    var _bottom = _up + _sprHeight
+
+    draw_sprite_pos(
+        _spr, _fram,
+        _left + _skew, _up,
+        _right + _skew, _up,
+        _right, _bottom,
+        _left, _bottom,
+        _alpha
+    )
+	//draw_sprite_ext(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, _blend, _alpha)
+}
+
+#endregion
