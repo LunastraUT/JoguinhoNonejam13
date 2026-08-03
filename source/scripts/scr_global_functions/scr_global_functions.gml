@@ -64,7 +64,7 @@ function structTry(_struct, _name, _default)
 function spawnParticles(_x = x, _y = y, _typeOrSingle, _amount, _externVar = noone)
 {
 	var _manager = noone
-	if !instanceExistsPaused(ma_particles) {
+	if !instance_exists(ma_particles) {
 		_manager = instance_create_depth(0, 0, -999, ma_particles)
 	} else {_manager = ma_particles}
 	

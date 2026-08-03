@@ -1,4 +1,4 @@
- particles = array_create(global.particle_max)
+particles = array_create(global.particle_max)
 particle_groups = []
 group_index = 0
 particle_index = 0
@@ -91,7 +91,7 @@ function spawn_particle(_p, _x = x, _y = y)
 type_particles = function(_x = 0, _y = 0, _type = "radial_dust", _amount = 5, _externVar = noone) {
 	var _g = spawn_particle_group()
 	switch(_type) {
-		case "radial_dust":
+		case "walk":
 		break;
 	}
 }

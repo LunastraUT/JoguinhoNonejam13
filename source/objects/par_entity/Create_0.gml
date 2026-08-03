@@ -4,6 +4,7 @@ take_damage = function(_damage) {
 }
 
 skew = 0
+skew_max = 0
 
 //Fisica
 	//Speed
@@ -16,8 +17,8 @@ skew = 0
 	spd = 2
 
 	//Jump
-	j_height = 5
-	grav = 0.45
+	j_height = 4
+	grav = 0.2
 	grav_mult = 1
 	gravit = 1
 	bind_jump = false
@@ -40,14 +41,13 @@ update_air_physics = function() {
 
 //Actor
 	looking_at = 1 //-1 LEFT, 1 RIGHT
-	old_looking_at = looking_at
 	grounded = true
 //
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
 	//draw_sprite_pos(sprite_index, image_index, x+skew, y-sprite_height, (x+sprite_width)+skew, y-sprite_height, x+sprite_width, y, x, y, _alpha)
-	draw_sprite_ext(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, _blend, _alpha)
-}
+	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
+} 
 
 //Animation
 	preloaded_animations = {

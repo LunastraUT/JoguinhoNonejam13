@@ -34,9 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+    "name":"spr_gato_idle",
+    "path":"sprites/spr_gato_idle/spr_gato_idle.yy",
+  },
+  "spriteMaskId":{
     "name":"spr_player",
     "path":"sprites/spr_player/spr_player.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

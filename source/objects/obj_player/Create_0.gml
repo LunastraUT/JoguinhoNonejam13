@@ -1,7 +1,26 @@
 // Inherit the parent event
 event_inherited();
 
-accel = 0
+//Particles
+	particle_timer = 0
+//
+
+//slakkkkkkkk
+	skew = 0
+	skew_max = 0
+//
+
+character = "gato"
+ 
+//Animations
+	preloaded_animations = {
+		idle: asset_get_index("spr_"+character+"_idle"),
+		walk: asset_get_index("spr_"+character+"_walk"),
+		wallhang: asset_get_index("spr_"+character+"_wallhang"),
+		fall: asset_get_index("spr_"+character+"_fall"),
+		jump: asset_get_index("spr_"+character+"_jump")
+	}
+//     
 
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)
@@ -27,14 +46,13 @@ function updateCollision() {
 
 function move() {
 	if MOVE_H != 0 {
-		spd_max = 2	
-	} else {spd_max = 0}
+		spd_max = 1*MOVE_H
+		skew_max = -2*looking_at
+	} else {spd_max = 0 skew_max = 0}
 	
-	spd = lerp(spd, spd_max, 0.1)
-	
-	var _moveSpd = MOVE_H*spd
+	skew = lerp(skew, skew_max, 0.1)
 
-	hsp = _moveSpd
+	hsp = lerp(hsp, spd_max, 0.1)
 	
 	updateLooking()
 }
@@ -53,10 +71,10 @@ function jump() {
 }
 
 function land() {
-	//spawnParticles(x+24, y, "land_ground", irandom_range(4, 6))
+	spawnParticles(x+24, y, "land_ground", irandom_range(4, 6))
 }
 
-function timers() {
+function timers() { 
 	//Coyote
 	if grounded {
 	    coyote_time = coyote_max
@@ -86,6 +104,17 @@ states[? "on_ground"] = {
 	update: function() {
 		move()
 		jump()
+		
+		if MOVE_H != 0 {
+			particle_timer++
+			if particle_timer % 5 == 0 {
+				var _part = {spr: choose(fx_dust, fx_dust2), spd: -looking_at*0.5, life: 30}
+				spawnParticles(x+10*-looking_at, y-5, _part, 1)
+			} 
+			
+			playAnim("walk", true)
+		} 
+		else {playAnim("idle", true)}
 
 		if(!grounded) {
 			xscale_target = 1
@@ -107,7 +136,9 @@ states[? "jumping"] = {
 	},
 	update: function() {
 		if vsp < 0 {
-			//playAnim("jump", false, 1)	
+			playAnim("jump", false, 1)	
+		} else {
+			playAnim("fall", false, 1)
 		}
 	
 		move()
