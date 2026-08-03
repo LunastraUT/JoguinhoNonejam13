@@ -17,7 +17,7 @@ skew_max = 0
 	spd = 2
 
 	//Jump
-	j_height = 4
+	j_height = 3.4
 	grav = 0.2
 	grav_mult = 1
 	gravit = 1

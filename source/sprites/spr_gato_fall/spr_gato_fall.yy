@@ -3,7 +3,7 @@
   "%Name":"spr_gato_fall",
   "bboxMode":0,
   "bbox_bottom":24,
-  "bbox_left":2,
+  "bbox_left":3,
   "bbox_right":20,
   "bbox_top":11,
   "collisionKind":1,

@@ -13,7 +13,7 @@
 	cam_offset_y = 0
 	
 	//Follow
-		cam_speed_default = 0.1
+		cam_speed_default = 0.8
 		cam_speed = cam_speed_default
 		cam_follow_x = 0
 		cam_follow_y = 0
