@@ -73,27 +73,46 @@ function spawnParticles(_x = x, _y = y, _typeOrSingle, _amount, _externVar = noo
 	{_manager.spawn_particle(_typeOrSingle, _x, _y)}
 }
 
-function draw_sprite_ext_skew(_spr, _fram, _x, _y, _xscale, _yscale, _angle, _skew, _blend, _alpha) {
-    var _offX = sprite_get_xoffset(_spr)
-    var _offY = sprite_get_yoffset(_spr)
+function draw_sprite_ext_skew(_spr, _frame, _x, _y, _xscale, _yscale, _angle, _skew, _blend, _alpha)
+{
+    var _offx = sprite_get_xoffset(_spr) * _xscale
+    var _offy = sprite_get_yoffset(_spr) * _yscale
 
-    var _sprWidth = sprite_get_width(_spr) * _xscale
-    var _sprHeight = sprite_get_height(_spr) * _yscale
+    var _sprW = sprite_get_width(_spr) * _xscale
+    var _sprH = sprite_get_height(_spr) * _yscale
 
-    var _left   = _x - _offX * _xscale
-    var _up    = _y - _offY * _yscale
-    var _right  = _left + _sprWidth
-    var _bottom = _up + _sprHeight
+    var _x1 = -_offx + _skew
+    var _y1 = -_offy
 
+    var _x2 = -_offx + _sprW + _skew
+    var _y2 = -_offy
+
+    var _x3 = -_offx + _sprW
+    var _y3 = -_offy + _sprH
+
+    var _x4 = -_offx
+    var _y4 = -_offy + _sprH
+
+    var _cos = dcos(_angle)
+    var _sin = dsin(_angle)
+    
     draw_sprite_pos(
-        _spr, _fram,
-        _left + _skew, _up,
-        _right + _skew, _up,
-        _right, _bottom,
-        _left, _bottom,
+        _spr, _frame,
+
+        _x + _x1 * _cos - _y1 * _sin,
+        _y + _x1 * _sin + _y1 * _cos,
+
+        _x + _x2 * _cos - _y2 * _sin,
+        _y + _x2 * _sin + _y2 * _cos,
+
+        _x + _x3 * _cos - _y3 * _sin,
+        _y + _x3 * _sin + _y3 * _cos,
+
+        _x + _x4 * _cos - _y4 * _sin,
+        _y + _x4 * _sin + _y4 * _cos,
+
         _alpha
     )
-	//draw_sprite_ext(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, _blend, _alpha)
 }
 
 #endregion

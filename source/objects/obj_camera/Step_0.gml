@@ -137,6 +137,30 @@ switch(cam_state)
 		cam_state = camera_states.follow
 		//porenquanto
 	break;
+	case camera_states.quotes:
+		
+		
+	break;
 }
 
 camera_set_view_pos(view_camera[0], x, y)
+camera_set_view_size(view_camera[0], res_w*zoom, res_h*zoom)
+
+
+//Parallax
+for(var _bg = 0; _bg < array_length(parallax_data[global.level-1]); _bg++) {
+	var _data = parallax_data[global.level-1][_bg]
+	var _layerId = layer_get_id(_data.layer_name)
+		
+	if _data.update != -1 {_data.update(_data)}
+		
+	// moving bg
+	_data.position[0] += _data.move_speed[0]
+	_data.position[1] += _data.move_speed[1]
+		
+	// rendering
+	var _x = _data.position[0]
+	var _y = _data.position[1]
+	layer_x(_layerId, (x+_x)/_data.parallax[0])
+	layer_y(_layerId, (y+_y)/_data.parallax[1])
+}

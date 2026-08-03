@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BGElement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BGElement",
+  "parent":{
+    "name":"Constructors",
+    "path":"folders/Constructors.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

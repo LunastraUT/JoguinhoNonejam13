@@ -2,10 +2,17 @@
 	enum camera_states {
 		follow,
 		transition,
+		quotes,
 		locked
 	}
-
+	
+	res_w = RES_W
+	res_h = RES_H
 	cam_state = camera_states.locked
+	if room == rm_choice {
+		y += 100
+		cam_state = camera_states.quotes
+	}
 
 	target = noone
 	
@@ -42,3 +49,7 @@ fix_pos = function() {
 	x = cam_follow_x
 	y = cam_follow_y
 }
+
+parallax_data = [
+	[new BGElement("BG1", [5, 20]), new BGElement("BG2", [10, 20])]
+]

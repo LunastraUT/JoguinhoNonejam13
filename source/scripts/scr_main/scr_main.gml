@@ -1,4 +1,5 @@
 global.particle_max = 200
+global.level = 1
 global.collisions = [obj_colisor]
 
 global.collectables_data = {
