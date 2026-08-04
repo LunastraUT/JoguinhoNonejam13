@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_colisor",
+  "%Name":"obj_spike",
   "eventList":[],
   "managed":true,
-  "name":"obj_colisor",
+  "name":"obj_spike",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
     "path":"folders/Objects/Blocks.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_damage",
+    "path":"objects/par_damage/par_damage.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,5 +35,5 @@
     "path":"sprites/spr_colisor/spr_colisor.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

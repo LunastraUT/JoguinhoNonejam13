@@ -1,4 +1,4 @@
-function spawnDiabox(_text, _target, _pos = [0, 0], _right = false) {
+function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone) {
 	return {
 		setup: false,
 		text: _text,
@@ -6,6 +6,7 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false) {
 		pos: _pos,
 		box: noone,
 		right: _right,
+		sound: _snd,
 		func : function(self)
 		{
 			if (!self.setup)
@@ -14,6 +15,9 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false) {
 				self.box.text = self.text
 				self.box.rabinho_target = self.target
 				self.box.right = self.right
+				if self.sound != noone {
+					audio_play_sound(self.sound, 1, false)	
+				}
 				
 				self.setup = true
 			}
@@ -28,6 +32,7 @@ camera.cam_state = camera_states.quotes
 
 player = instance_create_layer(-50, 144, "Entities", obj_cutscenenpc)
 npc = instance_create_layer(room_width+50, 144, "Entities" ,obj_cutscenenpc)
+npc.cor_gato = global.gatos.amarelo
 
 waitList(mix([player.move(180), npc.move(-180)]))
 waitList(wait(1))

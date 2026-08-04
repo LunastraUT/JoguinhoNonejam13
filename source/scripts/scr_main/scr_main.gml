@@ -1,16 +1,16 @@
 global.particle_max = 200
 global.level = 1
-global.collisions = [obj_colisor]
+global.collisions = [obj_colisor, obj_nuvem]
 
 global.gatos = {
-	rosa: $FFAAFF,
-	ciano: $55FFFF,
-	azul: $00AAFF,
-	verde: $55AA55,
-	amarelo: $FFAA00,
-	vermelho: $FF0055,
-	roxo: $AA55AA,
-	preto: $5555AA
+	rosa:      make_color_rgb(255, 170, 255),
+	ciano:     make_color_rgb(85, 255, 255),
+	azul:      make_color_rgb(0, 170, 255),
+	verde:     make_color_rgb(85, 170, 85),
+	amarelo:   make_color_rgb(255, 170, 0),
+	vermelho:  make_color_rgb(255, 0, 85),
+	roxo:      make_color_rgb(170, 85, 170),
+	preto:     make_color_rgb(85, 85, 170)
 }
 
 global.collectables_data = {

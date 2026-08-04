@@ -19,28 +19,22 @@ event_inherited();
 		jump: asset_get_index("spr_gato_jump")
 	}
 //     
-
-cor_gato = global.gatos.rosa
+ 
+cor_gato = global.gatos.ciano
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
 	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
 	
 	shader_set(shd_color_replace)
 
-	var from = make_color_rgb(255, 0, 0)
-	var to   = make_color_rgb(0, 255, 0)
-
+	var _to = cor_gato 
+	
+	var _shTo = shader_get_uniform(shd_color_replace, "u_toColor")
 	shader_set_uniform_f(
-	    u_fromColor,
-	    color_get_red(from) / 255,
-	    color_get_green(from) / 255,
-	    color_get_blue(from) / 255
-	)
-	shader_set_uniform_f(
-	    u_toColor,
-	    color_get_red(to) / 255,
-	    color_get_green(to) / 255,
-	    color_get_blue(to) / 255
+	    _shTo,
+	    color_get_red(_to) / 255,
+	    color_get_green(_to) / 255,
+	    color_get_blue(_to) / 255
 	)
 
 	var _spriteName = sprite_get_name(sprite_index)
@@ -48,7 +42,7 @@ draw = function(_blend = image_blend, _alpha = image_alpha) {
 	draw_sprite_ext_skew(_sprite, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, cor_gato, _alpha)
 
 	shader_reset()
-} 
+}
 
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)
@@ -192,25 +186,12 @@ states[? "jumping"] = {
 	}
 }
 
-states[? "levelend"] = {
+states[? "morreudasilva"] = {
 	create: function() {
-		playAnim("idle", true)
-		action_timer = 0
-		hsp = 0
+
 	},
 	update: function() {
-		skew = lerp(skew, 0, 0.1)
-		action_timer++
-		
-		if action_timer > 100 {
-			if x > room_width+30 {
-				room_goto(rm_choice)
-			} else {
-				looking_at = 1
-				hsp = 1
-				playAnim("walk", true)
-			}
-		}
+		fake_angle ++
 	},
 	leave: function() {
 		
