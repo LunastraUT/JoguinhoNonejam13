@@ -144,7 +144,7 @@ switch(cam_state)
 }
 
 camera_set_view_pos(view_camera[0], x, y)
-camera_set_view_size(view_camera[0], res_w*zoom, res_h*zoom)
+camera_set_view_size(view_camera[0], res_w, res_h)
 
 
 //Parallax

@@ -47,10 +47,10 @@ function updateCollision() {
 function move() {
 	if MOVE_H != 0 {
 		spd_max = 1*MOVE_H
-		skew_max = -5*looking_at
+		skew_max = -3*hsp
 	} else {spd_max = 0 skew_max = 0}
 	
-	skew = lerp(skew, skew_max, 0.1)
+	skew = lerp(skew, skew_max, 0.8)
 
 	hsp = lerp(hsp, spd_max, 0.1)
 	
