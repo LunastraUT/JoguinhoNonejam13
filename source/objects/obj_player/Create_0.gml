@@ -146,11 +146,13 @@ states[? "jumping"] = {
 		update_air_physics()
 	
 		if grounded {
-			land()
 			stopAnim()
 			
-			xscale = 1.5
-			yscale = 0.6
+			if vsp > 0 {
+				land()
+				xscale = 1.5
+				yscale = 0.6
+			}
 			
 			changeState("on_ground")
 		} 

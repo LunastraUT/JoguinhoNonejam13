@@ -10,7 +10,7 @@
 	res_h = RES_H
 	cam_state = camera_states.locked
 	if room == rm_choice {
-		y += 100
+		y += 30
 		cam_state = camera_states.quotes
 	}
 
@@ -51,5 +51,8 @@ fix_pos = function() {
 }
 
 parallax_data = [
-	[new BGElement("BG1", [5, 20]), new BGElement("BG2", [10, 20])]
+	[new BGElement("BG1", [5, 20]), 
+	new BGElement("BG2", [10, 20]),
+	new BGElement("BG0", [10, 20], [0, 0], [1, 0])
+	]
 ]
