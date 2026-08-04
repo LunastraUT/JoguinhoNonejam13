@@ -10,7 +10,7 @@ event_inherited();
 	skew_max = 0
 //
 
-character = "gato"
+character = global.current_char
  
 //Animations
 	preloaded_animations = {

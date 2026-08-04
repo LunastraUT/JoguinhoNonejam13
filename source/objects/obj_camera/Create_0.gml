@@ -9,10 +9,6 @@
 	res_w = RES_W
 	res_h = RES_H
 	cam_state = camera_states.locked
-	if room == rm_choice {
-		y += 30
-		cam_state = camera_states.quotes
-	}
 
 	target = noone
 	

@@ -14,7 +14,7 @@ skew_max = 0
 	hsp = 0
 	vsp = 0
 
-	spd = 2
+	spd = 1
 
 	//Jump
 	j_height = 3.4

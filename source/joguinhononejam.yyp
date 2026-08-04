@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Constructors","folderPath":"folders/Constructors.yy","name":"Constructors","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Camera","folderPath":"folders/Objects/Camera.yy","name":"Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Chars","folderPath":"folders/Objects/Chars.yy","name":"Chars","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -21,6 +22,7 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"BG","folderPath":"folders/Sprites/BG.yy","name":"BG","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Blocos Sla","folderPath":"folders/Sprites/Blocos Sla.yy","name":"Blocos Sla","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Dialogue","folderPath":"folders/Sprites/Dialogue.yy","name":"Dialogue","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particulazinhas","folderPath":"folders/Sprites/Particulazinhas.yy","name":"Particulazinhas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Peronagems","folderPath":"folders/Sprites/Peronagems.yy","name":"Peronagems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gatinho","folderPath":"folders/Sprites/Peronagems/gatinho.yy","name":"gatinho","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -35,7 +37,9 @@
   },
   "name":"joguinhononejam",
   "resources":[
+    {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
     {"id":{"name":"ma_coroutine","path":"objects/ma_coroutine/ma_coroutine.yy",},},
+    {"id":{"name":"ma_cutscenes","path":"objects/ma_cutscenes/ma_cutscenes.yy",},},
     {"id":{"name":"ma_particles","path":"objects/ma_particles/ma_particles.yy",},},
     {"id":{"name":"obj_boundcamera","path":"objects/obj_boundcamera/obj_boundcamera.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
@@ -66,6 +70,7 @@
     {"id":{"name":"spr_cidade_2","path":"sprites/spr_cidade_2/spr_cidade_2.yy",},},
     {"id":{"name":"spr_colisor","path":"sprites/spr_colisor/spr_colisor.yy",},},
     {"id":{"name":"spr_collectables","path":"sprites/spr_collectables/spr_collectables.yy",},},
+    {"id":{"name":"spr_diabox","path":"sprites/spr_diabox/spr_diabox.yy",},},
     {"id":{"name":"spr_gato_fall","path":"sprites/spr_gato_fall/spr_gato_fall.yy",},},
     {"id":{"name":"spr_gato_idle","path":"sprites/spr_gato_idle/spr_gato_idle.yy",},},
     {"id":{"name":"spr_gato_jump","path":"sprites/spr_gato_jump/spr_gato_jump.yy",},},
