@@ -10,17 +10,45 @@ event_inherited();
 	skew_max = 0
 //
 
-character = global.current_char
- 
 //Animations
 	preloaded_animations = {
-		idle: asset_get_index("spr_"+character+"_idle"),
-		walk: asset_get_index("spr_"+character+"_walk"),
-		wallhang: asset_get_index("spr_"+character+"_wallhang"),
-		fall: asset_get_index("spr_"+character+"_fall"),
-		jump: asset_get_index("spr_"+character+"_jump")
+		idle: asset_get_index("spr_gato_idle"),
+		walk: asset_get_index("spr_gato_walk"),
+		wallhang: asset_get_index("spr_gato_wallhang"),
+		fall: asset_get_index("spr_gato_fall"),
+		jump: asset_get_index("spr_gato_jump")
 	}
 //     
+
+cor_gato = global.gatos.rosa
+
+draw = function(_blend = image_blend, _alpha = image_alpha) {
+	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
+	
+	shader_set(shd_color_replace)
+
+	var from = make_color_rgb(255, 0, 0)
+	var to   = make_color_rgb(0, 255, 0)
+
+	shader_set_uniform_f(
+	    u_fromColor,
+	    color_get_red(from) / 255,
+	    color_get_green(from) / 255,
+	    color_get_blue(from) / 255
+	)
+	shader_set_uniform_f(
+	    u_toColor,
+	    color_get_red(to) / 255,
+	    color_get_green(to) / 255,
+	    color_get_blue(to) / 255
+	)
+
+	var _spriteName = sprite_get_name(sprite_index)
+	var _sprite = asset_get_index(_spriteName+"_white")
+	draw_sprite_ext_skew(_sprite, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, cor_gato, _alpha)
+
+	shader_reset()
+} 
 
 //Camera
 	camera = instance_create_depth(x, y, 0, obj_camera)

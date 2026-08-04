@@ -2,7 +2,16 @@ global.particle_max = 200
 global.level = 1
 global.collisions = [obj_colisor]
 
-global.current_char = "gato"
+global.gatos = {
+	rosa: $FFAAFF,
+	ciano: $55FFFF,
+	azul: $00AAFF,
+	verde: $55AA55,
+	amarelo: $FFAA00,
+	vermelho: $FF0055,
+	roxo: $AA55AA,
+	preto: $5555AA
+}
 
 global.collectables_data = {
 	bolo: {points: 10, harmful: false},

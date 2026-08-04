@@ -96,6 +96,8 @@ function draw_sprite_ext_skew(_spr, _frame, _x, _y, _xscale, _yscale, _angle, _s
     var _cos = dcos(_angle)
     var _sin = dsin(_angle)
     
+	draw_set_colour(_blend)
+	
     draw_sprite_pos(
         _spr, _frame,
 
