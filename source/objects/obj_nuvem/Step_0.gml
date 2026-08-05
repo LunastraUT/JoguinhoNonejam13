@@ -2,13 +2,6 @@ if disabled {
 	sprite_index = noone
 	y_target = ystart
 	disabled_timer--
-	if disabled_timer <= 0 {
-		stepped = false
-		alpha_target = 1
-		sprite_index = spr_nuvem
-		disabled = false
-		disabled_timer = disabled_timer_max
-	}
 } else {
 	if place_meeting(x, y-2, obj_player) {
 		y_target = ystart+1

@@ -1,4 +1,4 @@
-stand_timer_max = 50 
+stand_timer_max = 20
 stand_timer = stand_timer_max
 
 rest_timer_max = 50
