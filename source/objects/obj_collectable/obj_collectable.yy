@@ -10,8 +10,8 @@
   "name":"obj_collectable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Blocks",
+    "path":"folders/Objects/Blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collectables",
-    "path":"sprites/spr_collectables/spr_collectables.yy",
+    "name":"spr_bolo",
+    "path":"sprites/spr_bolo/spr_bolo.yy",
   },
   "spriteMaskId":null,
   "visible":true,
