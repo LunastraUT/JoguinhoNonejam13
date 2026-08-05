@@ -5,7 +5,7 @@ switch(state) {
 	case "active":
 		//isso aqui é um mamão na roda heh				eh um oq??????
 		if sprite_index != spr_porta_on {
-	
+			playSFX(snd_portaabre)
 			sprite_index = spr_porta_on;
 			fakexscale = 0.5;
 			fakeyscale = 1.5;

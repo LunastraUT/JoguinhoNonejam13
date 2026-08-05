@@ -2,6 +2,11 @@ global.particle_max = 200
 global.level = 1
 global.collisions = [obj_colisor, obj_nuvem]
 
+global.sfx_volume = 1
+global.music_volume = 1
+
+global.current_music = noone
+
 global.transition_to = noone
 enum transes {
     IN,

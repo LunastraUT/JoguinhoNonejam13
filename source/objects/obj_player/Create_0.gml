@@ -86,7 +86,7 @@ function jump() {
 		xscale = 0.6
 		yscale = 1.4
 		
-		//playSFX(snd_jump)
+		playSFX(snd_jump)
 		vsp = -j_height
 		
 		coyote_time = 0
@@ -95,11 +95,12 @@ function jump() {
 }
 
 function land() {
+	playSFX(snd_land)
 	spawnParticles(x+24, y, "land_ground", irandom_range(4, 6))
 }
 
 function timers() { 
-	//Coyote
+ 	//Coyote
 	if grounded {
 	    coyote_time = coyote_max
 	} else {
@@ -225,7 +226,7 @@ states[? "enterdoor"] = {
 
 states[? "morreudasilva"] = {
 	create: function() {
-
+		playSFX(snd_death)
 	},
 	update: function() {
 		fake_angle ++

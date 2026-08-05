@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"flowery_jarona_1_",
+  "%Name":"snd_entrosa",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":1.28,
   "exportDir":"",
-  "name":"flowery_jarona_1_",
+  "name":"snd_entrosa",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"flowery_jarona_1_.mp3",
+  "soundFile":"snd_entrosa.mp3",
   "volume":1.0,
 }
