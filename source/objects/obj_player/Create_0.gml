@@ -186,6 +186,31 @@ states[? "jumping"] = {
 	}
 }
 
+states[? "levelend"] = {
+	create: function() {
+		playAnim("idle", true)
+		action_timer = 0
+		hsp = 0
+	},
+	update: function() {
+		skew = lerp(skew, 0, 0.1)
+		action_timer++
+		
+		if action_timer > 100 {
+			if x > room_width+30 {
+				room_goto(rm_choice)
+			} else {
+				looking_at = 1
+				hsp = 1
+				playAnim("walk", true)
+			}
+		}
+	},
+	leave: function() {
+		
+	}
+}
+
 states[? "morreudasilva"] = {
 	create: function() {
 
