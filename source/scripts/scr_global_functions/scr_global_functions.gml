@@ -118,3 +118,20 @@ function draw_sprite_ext_skew(_spr, _frame, _x, _y, _xscale, _yscale, _angle, _s
 }
 
 #endregion
+
+#region TRANSITION STUFF
+	function transRights(_room) {
+	    global.transition_to = _room
+	    var _transmanager = noone
+    
+	    if !instance_exists(ma_transition) {
+	        instance_create_depth(0, 0, 1, ma_transition)
+	    }
+	    _transmanager = ma_transition
+    
+	    _transmanager.image_index = 0
+	    _transmanager.sprite_index = spr_transition_in
+	    _transmanager.trans = transes.IN
+	    _transmanager.transitioning = true
+	}
+#endregion

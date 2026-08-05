@@ -1,0 +1,2 @@
+trans = noone
+transitioning = false

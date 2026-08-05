@@ -3,6 +3,10 @@ global.level = 1
 global.collisions = [obj_colisor, obj_nuvem]
 
 global.transition_to = noone
+enum transes {
+    IN,
+    OUT
+}
 
 global.gatos = {
 	rosa:      make_color_rgb(255, 170, 255),
@@ -24,4 +28,11 @@ global.collectables_data = {
 #macro RES_W 320
 #macro RES_H 180
 
+display_set_gui_size(RES_W, RES_H)
 draw_set_font(fnt_main)
+
+camera_set_view_size(view_camera[0], RES_W, RES_H);
+window_set_size(RES_W*3, RES_H*3)
+window_center()
+
+room_goto(rm_menu)
