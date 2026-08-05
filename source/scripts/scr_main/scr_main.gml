@@ -2,6 +2,8 @@ global.particle_max = 200
 global.level = 1
 global.collisions = [obj_colisor, obj_nuvem]
 
+global.transition_to = noone
+
 global.gatos = {
 	rosa:      make_color_rgb(255, 170, 255),
 	ciano:     make_color_rgb(85, 255, 255),
