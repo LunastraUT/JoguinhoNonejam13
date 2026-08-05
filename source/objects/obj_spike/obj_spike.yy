@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_colisor",
-    "path":"sprites/spr_colisor/spr_colisor.yy",
+    "name":"spr_espinho",
+    "path":"sprites/spr_espinho/spr_espinho.yy",
   },
   "spriteMaskId":null,
   "visible":true,

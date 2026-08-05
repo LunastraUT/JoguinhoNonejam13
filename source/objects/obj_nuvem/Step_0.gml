@@ -5,7 +5,7 @@ if disabled {
 	if disabled_timer <= 0 {
 		stepped = false
 		alpha_target = 1
-		sprite_index = spr_player
+		sprite_index = spr_nuvem
 		disabled = false
 		disabled_timer = disabled_timer_max
 	}

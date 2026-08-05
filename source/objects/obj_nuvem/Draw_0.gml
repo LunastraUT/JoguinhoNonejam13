@@ -1,1 +1,1 @@
-draw_sprite_ext(spr_player, 0, x, y, image_xscale, image_yscale, image_alpha, image_blend, image_alpha)
+draw_sprite_ext(spr_nuvem, 0, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)

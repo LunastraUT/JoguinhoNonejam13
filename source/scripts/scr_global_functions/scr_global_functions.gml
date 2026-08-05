@@ -21,7 +21,7 @@ function structTry(_struct, _name, _default)
 		
 		if place_meeting(x, y+final_vsp, global.collisions) {
 			if vsp < 0 { //Corner fix
-		        var _tries = 24
+		        var _tries = 6
         
 		        // direita
 		        for (var i = 1; i <= _tries; i++) {

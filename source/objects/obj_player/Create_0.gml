@@ -1,6 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
+depth = 25;
+
 //Action Timer
 	action_timer = 0
 //
@@ -20,7 +22,7 @@ event_inherited();
 	}
 //     
  
-cor_gato = global.gatos.ciano
+cor_gato = global.gatos.rosa
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
 	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
