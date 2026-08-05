@@ -29,7 +29,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"nextLevel","filters":[],"listItems":[],"multiselect":false,"name":"nextLevel","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_lv1","path":"rooms/rm_lv1/rm_lv1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_lv1","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"nextLevel","filters":[],"listItems":[],"multiselect":false,"name":"nextLevel","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_menu","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
