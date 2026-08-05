@@ -3,6 +3,8 @@ event_inherited();
 
 depth = 25;
 
+ignore_collision = false
+
 //Action Timer
 	action_timer = 0
 //
@@ -55,7 +57,7 @@ draw = function(_blend = image_blend, _alpha = image_alpha) {
 #macro MOVE_H (INPUT_RIGHT - INPUT_LEFT)
 
 //Coyote Jump 
-	coyote_max = 10
+	coyote_max = 5
 	coyote_time = coyote_max
 //
 
@@ -226,10 +228,16 @@ states[? "enterdoor"] = {
 
 states[? "morreudasilva"] = {
 	create: function() {
+		hsp = 0
+		
+		vsp = -5
+		if y > room_height {vsp = -7} 
+		
+		ignore_collision = true
 		playSFX(snd_death)
 	},
 	update: function() {
-		fake_angle ++
+		update_air_physics()
 	},
 	leave: function() {
 		

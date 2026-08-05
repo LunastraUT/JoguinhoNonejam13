@@ -1,0 +1,1 @@
+playMusic(mus_plains)

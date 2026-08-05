@@ -8,7 +8,8 @@ function structTry(_struct, _name, _default)
 #region COLLISION STUFF
 	function hasCollision(_callbackX = function(){}, _callbackY = function(){}) //Entity collision
 	{
-		if place_meeting(x+final_hsp, y, global.collisions) {
+		
+		if place_meeting(x+final_hsp, y, global.collisions) && !ignore_collision {
 			while !place_meeting(x+sign(final_hsp), y, global.collisions) {
 				x += sign(final_hsp)	
 			}
@@ -19,7 +20,7 @@ function structTry(_struct, _name, _default)
 		}
 		x += final_hsp
 		
-		if place_meeting(x, y+final_vsp, global.collisions) {
+		if place_meeting(x, y+final_vsp, global.collisions) && !ignore_collision {
 			if vsp < 0 { //Corner fix
 		        var _tries = 6
         

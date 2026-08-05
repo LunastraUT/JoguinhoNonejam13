@@ -2,7 +2,7 @@ function playSFX(_index, _single = false, _priority = 0, _gain = global.sfx_volu
 {
 	if _single {
 		if audio_is_playing(_index) {
-			audio_stop_sound(_index)	
+			audio_stop_sound(_index)
 		}
 	}
 	

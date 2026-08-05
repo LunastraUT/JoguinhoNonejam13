@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"par_damage",
-  "eventList":[],
+  "%Name":"obj_DEUS",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"par_damage",
+  "name":"obj_DEUS",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objects/Parents.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_colisor",
-    "path":"sprites/spr_colisor/spr_colisor.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
