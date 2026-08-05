@@ -213,6 +213,16 @@ states[? "levelend"] = {
 	}
 }
 
+states[? "enterdoor"] = {
+	create: function() {
+		image_alpha = 0
+		hsp = 0
+		vsp = 0
+	},
+	update: function() {},
+	leave: function() {}
+}
+
 states[? "morreudasilva"] = {
 	create: function() {
 

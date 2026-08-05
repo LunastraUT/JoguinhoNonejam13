@@ -5,12 +5,9 @@ state = "inactive";
 fakexscale = 1;
 fakeyscale = 1;
 
-abriu = false
-
-function checkForBALLS(_bals) {
+function checkForBALLS(_balls) {
 	
-	if !instance_exists(_bals) && !abriu {
-		abriu = true
+	if !instance_exists(_balls) {
 		state = "active"	
 	}
 	//é só isso tmj
