@@ -1,12 +1,12 @@
-global_pos = [x, y]
+global_pos = [room_width/2, y]
 
 options = [
 	{
-		pos: global_pos,
+		pos: [global_pos[0], global_pos[1]],
 		text: "cu"
 	},
 	{
-		pos: global_pos,
+		pos: [global_pos[0], global_pos[1]],
 		text: "buceta"
 	},
 ]
@@ -22,8 +22,8 @@ y += 20
 reset = function() {
 	for(var _i = 0; _i < array_length(options); _i++) {
 		var _opcao = options[_i]
-		_opcao.pos = global_pos
-		if _i == 0 {_opcao.pos[0] += 50}
+		if _i == 1 {_opcao.pos[0] += 30}
+		if _i == 0 {_opcao.pos[0] -= 100}
 		
 		_opcao.dialoguestring = ""
 		_opcao.max_typing = string_length(_opcao.text)

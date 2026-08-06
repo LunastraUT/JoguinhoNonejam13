@@ -52,14 +52,18 @@ player = instance_create_layer(-50, 144, "Entities", obj_cutscenenpc)
 npc = instance_create_layer(room_width+50, 144, "Entities" ,obj_cutscenenpc)
 npc.cor_gato = global.gatos.amarelo
 
-//waitList(mix([player.move(180), npc.move(-180)]))
-//waitList(wait(1))
+waitList(mix([player.move(180), npc.move(-180)]))
+waitList(wait(1))
 
-var _xx = 50
-var _yy = (room_height/2)-70
-/*
-waitList(spawnDiabox("Tung tung tung sahur!", player, [_xx, _yy]))
-waitList(spawnDiabox("nao nao", npc, [_xx+70, _yy+30], true))
-waitList(spawnDiabox("affff", player, [_xx, _yy+60]))*/
+switch(global.question_data) {
+	case "tung":
+		var _xx = 50
+		var _yy = (room_height/2)-70
 
-waitList(spawnQuote([_xx, _yy+120]))
+		waitList(spawnDiabox("Tung tung tung sahur!", player, [_xx, _yy]))
+		waitList(spawnDiabox("nao nao", npc, [_xx+70, _yy+30], true))
+		waitList(spawnDiabox("affff", player, [_xx, _yy+60]))
+
+		waitList(spawnQuote([_xx, _yy+120]))
+	break;
+}

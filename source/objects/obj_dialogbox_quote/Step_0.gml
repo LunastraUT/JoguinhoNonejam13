@@ -10,12 +10,14 @@ for(var _i = 0; _i < array_length(options); _i++) {
 	
 		if _opcao.typing >= _opcao.max_typing && !_opcao.finished_typing {
 			_opcao.finished_typing = true
-			show_message(options)
 		}
 	}
 	
 	//options[_i] = _opcao
 }
+
+option_index += (INPUT_LEFT_PRESSED - INPUT_RIGHT_PRESSED)
+option_index = clamp(option_index, 0, 1)
 
 /*
 if can_trigger && !triggered_callback {

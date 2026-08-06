@@ -2,6 +2,8 @@
 sprite_index = spr_porta_off;
 state = "inactive";
 
+next_level = global.level.go_to
+
 fakexscale = 1;
 fakeyscale = 1;
 

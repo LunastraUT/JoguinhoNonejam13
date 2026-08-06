@@ -46,7 +46,9 @@ global.inputs = {
 
 // CONTROLES MOVIMENTO
 #macro INPUT_LEFT sign(get_input(global.inputs.left) + (L_GP_HORIZONTAL < 0))
+#macro INPUT_LEFT_PRESSED sign(get_input(global.inputs.left, "pressed"))
 #macro INPUT_RIGHT sign(get_input(global.inputs.right) + (L_GP_HORIZONTAL > 0))
+#macro INPUT_RIGHT_PRESSED sign(get_input(global.inputs.right, "pressed"))
 #macro INPUT_UP sign(get_input(global.inputs.up) + (L_GP_VERTICAL < 0))
 #macro INPUT_UP_PRESSED sign(get_input(global.inputs.up, "pressed"))
 #macro INPUT_DOWN sign(get_input(global.inputs.down) + (L_GP_VERTICAL > 0))

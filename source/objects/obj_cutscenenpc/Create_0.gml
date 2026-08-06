@@ -12,7 +12,7 @@ spd = 0
 	}
 //     
 
-cor_gato = global.gatos.ciano
+cor_gato = global.gatos.rosa
 draw = function(_blend = image_blend, _alpha = image_alpha) {
 	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
 	

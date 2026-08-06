@@ -1,5 +1,4 @@
 global.particle_max = 200
-global.level = 1
 global.collisions = [obj_colisor, obj_nuvem]
 
 global.sfx_volume = 1

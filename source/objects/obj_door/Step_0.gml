@@ -26,8 +26,9 @@ switch(state) {
 		}
 		
 		if image_index >= image_number-1 {
-			transRights(nextLevel)
-			state = "cacetada" 
+			levarparaoproximolevel(next_level)
+			
+			state = "cacetada"
 		}
 	break;
 }
