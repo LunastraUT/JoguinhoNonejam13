@@ -24,6 +24,8 @@ global.gatos = {
 	preto:     make_color_rgb(85, 85, 170)
 }
 
+//global.levelquotes = ds_()
+
 global.collectables_data = {
 	bolo: {points: 10, harmful: false},
 	cookiemorango: {points: 10, harmful: false}
@@ -40,4 +42,4 @@ camera_set_view_size(view_camera[0], RES_W, RES_H);
 window_set_size(RES_W*3, RES_H*3)
 window_center()
 
-room_goto(rm_menu)
+room_goto(rm_choice)
