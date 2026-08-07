@@ -30,7 +30,7 @@ global.collectables_data = {
 	cookiemorango: {points: 10, harmful: false}
 }
 
-#macro DEBUG false
+#macro DEBUG true
 #macro RES_W 320
 #macro RES_H 180
 
@@ -41,4 +41,4 @@ camera_set_view_size(view_camera[0], RES_W, RES_H)
 window_set_size(RES_W*3, RES_H*3)
 window_center()
 
-if DEBUG {room_goto(rm_debug)} else {room_goto(rm_question)}
+if DEBUG {room_goto(rm_debug)} else {room_goto(rm_menu)}
