@@ -16,3 +16,12 @@ function checkForBALLS(_balls) {
 
 }
 
+
+//pra checar se a sala começa com chave
+jacomecaabertopo = false;
+
+if !instance_exists(obj_chave) { //nossa que feio tudo hardcoded
+	jacomecaabertopo = true; // é só pra ter certeza de que vai funcionar!! to com mt sono..
+	sprite_index = spr_porta_on;
+	state = "active";
+}

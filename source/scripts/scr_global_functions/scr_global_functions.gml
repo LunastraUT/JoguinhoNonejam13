@@ -66,7 +66,7 @@ function spawnParticles(_x = x, _y = y, _typeOrSingle, _amount, _externVar = noo
 {
 	var _manager = noone
 	if !instance_exists(ma_particles) {
-		_manager = instance_create_depth(0, 0, -999, ma_particles)
+		_manager = instance_create_depth(0, 0, -55, ma_particles)
 	} else {_manager = ma_particles}
 	
 	if typeof(_typeOrSingle) == "string" 

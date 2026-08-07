@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":35.50041,
+  "duration":48.0,
   "exportDir":"",
   "name":"mus_plains",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_plains.mp3",
+  "soundFile":"mus_plains.ogg",
   "volume":1.0,
 }

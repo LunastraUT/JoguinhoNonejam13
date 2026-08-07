@@ -1,5 +1,5 @@
 global.particle_max = 200
-global.collisions = [obj_colisor, obj_nuvem]
+global.collisions = [obj_colisor, obj_copperblock, obj_nuvem]
 
 global.sfx_volume = 1
 global.music_volume = 1
@@ -41,4 +41,4 @@ camera_set_view_size(view_camera[0], RES_W, RES_H);
 window_set_size(RES_W*3, RES_H*3)
 window_center()
 
-room_goto(rm_question)
+room_goto(rm_debug)
