@@ -1,3 +1,3 @@
-if DEBUG {
+//if DEBUG {
 	room_restart()	
-}
+//}

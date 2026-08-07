@@ -12,7 +12,7 @@ global.levels[? "world1a"] = [ // MUNDO 1
     { // 3a
         room_level: rm_lv3_a,
         go_to: rm_question,
-        question_data: "tung"
+        question_data: "world1a"
     },
 ]
     
@@ -62,4 +62,11 @@ function levarparaoproximolevel() {
 	} else {
 		global.level = global.world[_next]	
 	}
+}
+
+function levarparaoproximomundo(_mundo) {
+	global.world = global.levels[? _mundo]
+	global.level = global.world[0]
+
+	transRights(global.level.room_level)
 }

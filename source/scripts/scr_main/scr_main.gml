@@ -30,7 +30,7 @@ global.collectables_data = {
 	cookiemorango: {points: 10, harmful: false}
 }
 
-#macro DEBUG true
+#macro DEBUG false
 #macro RES_W 320
 #macro RES_H 180
 

@@ -52,9 +52,26 @@ function spawnQuote(_opcoes) {
 	}
 }
 
+finish = function() {
+	return {
+		setup: false,
+		caller: id,
+		func : function(self)
+		{
+			if (!self.setup)
+			{
+				levarparaoproximomundo(self.caller.world_to_go[self.caller.escolha])
+			}
+			
+			return true
+		}
+	}
+}
+
 opcoes = ["SIM", "NAO"]
 escolha = 0
 resposta = ["ebaa", "affff"]
+world_to_go = ["world1a", "world1a"]
 
 final = function() {
 	waitList(mix([player.jump(2, escolha+1), spawnDiabox(opcoes[escolha], player, [xx, yy])]))
@@ -62,6 +79,7 @@ final = function() {
 	
 	waitList(wait(1))
 	waitList(player.move(200))
+	waitList(finish())
 }
 
 camera = instance_create_depth(0, y+30, depth, obj_camera)
@@ -78,8 +96,11 @@ xx = 50
 yy = (room_height/2)-20
 
 switch(global.question_data) {
-	case "tung":
-		waitList(spawnDiabox("vc gosta de roblox?", npc, [xx+70, yy], true))
+	case "world1a":
+		world_to_go = ["world2a", "world2b"]
+		resposta = ["Ah otimo!", "Vou avisar o padeiro :c"]
+		
+		waitList(spawnDiabox("vc gosta de bolo?", npc, [xx+70, yy], true))
 
 		waitList(spawnQuote(opcoes))
 	break;
