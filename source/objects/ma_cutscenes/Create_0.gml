@@ -11,6 +11,11 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 		{
 			if (!self.setup)
 			{
+				for(var _dia = 0; _dia < instance_number(obj_dialogbox); _dia++) {
+					var _dialog = instance_find(obj_dialogbox, _dia)
+					_dialog.y_target -= 20	
+				}
+				
 				self.box = instance_create_layer(self.pos[0], self.pos[1], "Entities", obj_dialogbox)
 				self.box.text = self.text
 				self.box.rabinho_target = self.target
@@ -27,15 +32,17 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 	}
 }
 
-function spawnQuote(_pos = [0, 0]) {
+function spawnQuote(_opcoes) {
 	return {
 		setup: false,
-		pos: _pos,
+		options: _opcoes,
 		func : function(self)
 		{
 			if (!self.setup)
 			{
-				self.box = instance_create_depth(self.pos[0], self.pos[1], -999, obj_dialogbox_quote)
+				self.box = instance_create_depth(room_width/2, 150, -999, obj_dialogbox_quote)
+				self.box.options = [{text: self.options[0]}, {text: self.options[1]}]
+				self.box.reset()
 				
 				self.setup = true
 			}
@@ -44,6 +51,12 @@ function spawnQuote(_pos = [0, 0]) {
 		}
 	}
 }
+
+opcoes = ["morango", "bosta"]
+escolha = 0
+resposta = ["oloco", "ta pega"]
+
+final = function() {}
 
 camera = instance_create_depth(0, y+30, depth, obj_camera)
 camera.cam_state = camera_states.quotes
@@ -55,15 +68,18 @@ npc.cor_gato = global.gatos.amarelo
 waitList(mix([player.move(180), npc.move(-180)]))
 waitList(wait(1))
 
+xx = 50
+yy = (room_height/2)-20
+
 switch(global.question_data) {
 	case "tung":
-		var _xx = 50
-		var _yy = (room_height/2)-70
+		waitList(spawnDiabox("Q Q CE GOSTA AI", npc, [xx+70, yy], true))
 
-		waitList(spawnDiabox("Tung tung tung sahur!", player, [_xx, _yy]))
-		waitList(spawnDiabox("nao nao", npc, [_xx+70, _yy+30], true))
-		waitList(spawnDiabox("affff", player, [_xx, _yy+60]))
-
-		waitList(spawnQuote([_xx, _yy+120]))
+		waitList(spawnQuote(opcoes))
+		
+		final = function() {
+			waitList(spawnDiabox(opcoes[escolha], player, [xx, yy]))
+			waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
+		}
 	break;
 }

@@ -7,7 +7,7 @@ if !looped {
 
 if anim_finished {
 	weight_anim = 0
-	anim_locked = false	
+	anim_locked = false
 	
 	anim_finished = false
 }

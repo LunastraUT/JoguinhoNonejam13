@@ -1,13 +1,13 @@
 global_pos = [room_width/2, y]
 
+treco = 0
+
 options = [
 	{
-		pos: [global_pos[0], global_pos[1]],
-		text: "cu"
+		text: "nada"
 	},
 	{
-		pos: [global_pos[0], global_pos[1]],
-		text: "buceta"
+		text: ":p"
 	},
 ]
 
@@ -22,6 +22,8 @@ y += 20
 reset = function() {
 	for(var _i = 0; _i < array_length(options); _i++) {
 		var _opcao = options[_i]
+		_opcao.pos = [global_pos[0], global_pos[1]]
+		
 		if _i == 1 {_opcao.pos[0] += 30}
 		if _i == 0 {_opcao.pos[0] -= 100}
 		
@@ -31,7 +33,6 @@ reset = function() {
 		_opcao.timer = 0
 		_opcao.time_for_next = 2
 		_opcao.finished_typing = false
-
 		
 		//options[_i] = _opcao
 	}
@@ -45,4 +46,5 @@ can_trigger = false
 time_trigger = 0
 triggered_callback = false
 
+ta_podendo = 0
 finished = false

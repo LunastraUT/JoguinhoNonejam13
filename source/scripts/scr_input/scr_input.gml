@@ -24,10 +24,6 @@ global.inputs = {
 		keys: [ord("C"), ord("L")],
 		pads: [gp_face1],
 	},
-	dive: {
-		keys: [ord("X"), ord("K")],
-		pads: [gp_face2, gp_face3],
-	},
 	pause: {
 		keys: [vk_escape, vk_enter, ord("P")],
 		pads: [gp_start],
@@ -57,7 +53,6 @@ global.inputs = {
 // CONTROLES EXTRA
 #macro INPUT_JUMP get_input(global.inputs.jump, "pressed")
 #macro INPUT_JUMP_RELEASED get_input(global.inputs.jump, "released")
-#macro INPUT_DIVE get_input(global.inputs.dive, "pressed")
 
 // INTERFACE
 #macro INPUT_PAUSE get_input(global.inputs.pause, "pressed")

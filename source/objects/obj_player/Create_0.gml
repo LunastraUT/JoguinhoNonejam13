@@ -18,7 +18,6 @@ ignore_collision = false
 	preloaded_animations = {
 		idle: asset_get_index("spr_gato_idle"),
 		walk: asset_get_index("spr_gato_walk"),
-		wallhang: asset_get_index("spr_gato_wallhang"),
 		fall: asset_get_index("spr_gato_fall"),
 		jump: asset_get_index("spr_gato_jump")
 	}
