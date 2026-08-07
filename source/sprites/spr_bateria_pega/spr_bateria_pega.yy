@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"os objetos",
-    "path":"folders/Sprites/os objetos.yy",
+    "name":"Mola",
+    "path":"folders/Sprites/Objetos/Mola.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

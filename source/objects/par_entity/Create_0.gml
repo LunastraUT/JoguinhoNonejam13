@@ -6,6 +6,8 @@ take_damage = function(_damage) {
 skew = 0
 skew_max = 0
 
+ignore_collision = false
+
 //Fisica
 	//Speed
 	final_hsp = 0
@@ -13,20 +15,32 @@ skew_max = 0
 	
 	hsp = 0
 	vsp = 0
+	vsp_max_default = 4
+	vsp_max = vsp_max_default
 
-	spd = 2
+	spd_default = 2
+	spd = spd_default
 
 	//Jump
 	j_height = 3.4
-	grav = 0.2
+	
+	grav_default = 0.2
+	grav = grav_default
 	grav_mult = 1
 	gravit = 1
+	
 	bind_jump = false
+	
+	//ásghua
+	underwater = false
+	grav_underwater = 0.15
+	spd_underwater = 1
+	vsp_max_underwater = 0.67
 //
 
 update_air_physics = function() {
 	vsp += (grav*grav_mult)*gravit
-	vsp = clamp(vsp, -60, 20)
+	vsp = clamp(vsp, -60, vsp_max)
 }
 
 //Juice
@@ -68,11 +82,10 @@ draw = function(_blend = image_blend, _alpha = image_alpha) {
 function playAnim(_animName, _loop = false, _weight = 0, _forced = false, _startFrame = 0) //just like fnf ewww 
 {
 	if (!struct_exists(preloaded_animations, _animName)) {return}
-	
-	if (current_anim == _animName) {return}
-	
+
 	if (!_forced)
 	{
+		if (current_anim == _animName) {return}
 		if (anim_locked) {return}
 		if (_weight < weight_anim) {return}
 	}

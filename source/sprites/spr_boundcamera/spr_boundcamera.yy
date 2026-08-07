@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Blocos Sla",
-    "path":"folders/Sprites/Blocos Sla.yy",
+    "name":"Bloquinhos",
+    "path":"folders/Sprites/Bloquinhos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

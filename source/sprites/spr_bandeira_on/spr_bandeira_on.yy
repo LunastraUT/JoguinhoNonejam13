@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"os objetos",
-    "path":"folders/Sprites/os objetos.yy",
+    "name":"Nao foi usado",
+    "path":"folders/Sprites/Objetos/Nao foi usado.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

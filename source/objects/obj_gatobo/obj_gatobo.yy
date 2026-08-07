@@ -9,8 +9,8 @@
   "name":"obj_gatobo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Chars",
-    "path":"folders/Objects/Chars.yy",
+    "name":"Personagemzinhos",
+    "path":"folders/Objects/Personagemzinhos.yy",
   },
   "parentObjectId":{
     "name":"par_entity",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gatobo_idle",
-    "path":"sprites/spr_gatobo_idle/spr_gatobo_idle.yy",
+    "name":"spr_gatobo",
+    "path":"sprites/spr_gatobo/spr_gatobo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

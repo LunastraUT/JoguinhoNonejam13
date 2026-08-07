@@ -1,8 +1,3 @@
-// Inherit the parent event
-if anim_finished {
-	playAnim("idle", false, 1)
-}
-
 event_inherited();
 
 if cuspe_timer <= 0 {

@@ -9,8 +9,8 @@
   "name":"obj_cutscenenpc",
   "overriddenProperties":[],
   "parent":{
-    "name":"Chars",
-    "path":"folders/Objects/Chars.yy",
+    "name":"Personagemzinhos",
+    "path":"folders/Objects/Personagemzinhos.yy",
   },
   "parentObjectId":{
     "name":"par_entity",

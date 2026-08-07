@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_copperblock_on",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":15,
   "bbox_left":0,
   "bbox_right":15,
@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"os objetos",
-    "path":"folders/Sprites/os objetos.yy",
+    "name":"Bloquinhos",
+    "path":"folders/Sprites/Bloquinhos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

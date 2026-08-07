@@ -1,4 +1,4 @@
-global.levels = ds_map_create()
+  global.levels = ds_map_create()
    
 global.levels[? "world1a"] = [ // MUNDO 1
     { // 1a

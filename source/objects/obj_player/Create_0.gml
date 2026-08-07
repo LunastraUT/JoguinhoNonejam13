@@ -3,7 +3,12 @@ event_inherited();
 
 depth = 25;
 
-ignore_collision = false
+morte = function() 
+{
+	if current_state != "morreudasilva" {
+		changeState("morreudasilva")
+	}	
+}
 
 //Action Timer
 	action_timer = 0
@@ -97,7 +102,7 @@ function jump() {
 
 function land() {
 	playSFX(snd_land)
-	spawnParticles(x+24, y, "land_ground", irandom_range(4, 6))
+	spawnParticles(x, y, "landground", 4)
 }
 
 function timers() { 

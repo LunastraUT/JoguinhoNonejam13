@@ -11,12 +11,12 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 		{
 			if (!self.setup)
 			{
-				for(var _dia = 0; _dia < instance_number(obj_dialogbox); _dia++) {
-					var _dialog = instance_find(obj_dialogbox, _dia)
+				for(var _dia = 0; _dia < instance_number(obj_caixadialogo); _dia++) {
+					var _dialog = instance_find(obj_caixadialogo, _dia)
 					_dialog.y_target -= 20	
 				}
 				
-				self.box = instance_create_layer(self.pos[0], self.pos[1], "Entities", obj_dialogbox)
+				self.box = instance_create_layer(self.pos[0], self.pos[1], "Entities", obj_caixadialogo)
 				self.box.text = self.text
 				self.box.rabinho_target = self.target
 				self.box.right = self.right
@@ -40,7 +40,7 @@ function spawnQuote(_opcoes) {
 		{
 			if (!self.setup)
 			{
-				self.box = instance_create_depth(room_width/2, 150, -999, obj_dialogbox_quote)
+				self.box = instance_create_depth(room_width/2, 150, -999, obj_caixadialogo_pergunta)
 				self.box.options = [{text: self.options[0]}, {text: self.options[1]}]
 				self.box.reset()
 				
@@ -52,11 +52,17 @@ function spawnQuote(_opcoes) {
 	}
 }
 
-opcoes = ["morango", "bosta"]
+opcoes = ["SIM", "NAO"]
 escolha = 0
-resposta = ["oloco", "ta pega"]
+resposta = ["ebaa", "affff"]
 
-final = function() {}
+final = function() {
+	waitList(mix([player.jump(2, escolha+1), spawnDiabox(opcoes[escolha], player, [xx, yy])]))
+	waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
+	
+	waitList(wait(1))
+	waitList(player.move(200))
+}
 
 camera = instance_create_depth(0, y+30, depth, obj_camera)
 camera.cam_state = camera_states.quotes
@@ -73,13 +79,8 @@ yy = (room_height/2)-20
 
 switch(global.question_data) {
 	case "tung":
-		waitList(spawnDiabox("Q Q CE GOSTA AI", npc, [xx+70, yy], true))
+		waitList(spawnDiabox("vc gosta de roblox?", npc, [xx+70, yy], true))
 
 		waitList(spawnQuote(opcoes))
-		
-		final = function() {
-			waitList(spawnDiabox(opcoes[escolha], player, [xx, yy]))
-			waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
-		}
 	break;
 }

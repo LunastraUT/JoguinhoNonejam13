@@ -13,8 +13,8 @@
     "path":"folders/Objects/Projetil.yy",
   },
   "parentObjectId":{
-    "name":"par_damage",
-    "path":"objects/par_damage/par_damage.yy",
+    "name":"par_dano",
+    "path":"objects/par_dano/par_dano.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

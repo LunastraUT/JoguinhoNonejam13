@@ -46,8 +46,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Dialogue",
-    "path":"folders/Sprites/Dialogue.yy",
+    "name":"Dialogo",
+    "path":"folders/Sprites/Dialogo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

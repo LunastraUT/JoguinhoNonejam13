@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"os objetos",
-    "path":"folders/Sprites/os objetos.yy",
+    "name":"Chave e Porta",
+    "path":"folders/Sprites/Objetos/Chave e Porta.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

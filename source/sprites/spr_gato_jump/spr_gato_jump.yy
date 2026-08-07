@@ -33,7 +33,7 @@
   "origin":7,
   "parent":{
     "name":"gatinho",
-    "path":"folders/Sprites/Peronagems/gatinho.yy",
+    "path":"folders/Sprites/Personagemzinhos/gatinho.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -4,8 +4,18 @@ for (var i = 0; i < global.particle_max; i++)
 
     if (!p.active)
         continue
-
-    p.spd += p.incrementspd
+	
+	p.spd += p.incrementspd	
+	if (!p.invertspeed)
+	{
+	    if ((p.incrementspd < 0 && p.spd < 0) ||
+	        (p.incrementspd > 0 && p.spd > 0))
+	    {
+	        p.spd = 0
+			p.incrementspd = 0
+	    }
+	}
+	
     p.dir += p.incrementdir
 	
 	p.vsp += p.grav

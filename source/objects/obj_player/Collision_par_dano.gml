@@ -1,0 +1,1 @@
+if other.active {morte()}

@@ -21,7 +21,8 @@ for (var i = 0; i < global.particle_max; i++)
 
         life : 0,
         size : 1,
-
+		
+		invertspeed : false,
         follow_dir : false
     };
 }
@@ -84,14 +85,57 @@ function spawn_particle(_p, _x = x, _y = y)
 
     p.alpha = structTry(_p, "alpha", 1)
     p.imgframe = structTry(_p, "imgframe", floor(random(sprite_get_number(p.spr))))
+	
+	p.invertspeed = structTry(_p, "invertspeed", true)
 
     particles[_oldIndex] = p
 }
 
-type_particles = function(_x = 0, _y = 0, _type = "radial_dust", _amount = 5, _externVar = noone) {
+type_particles = function(_x = 0, _y = 0, _type = "roundpuff", _amount = 5, _externVar = noone) {
 	var _g = spawn_particle_group()
 	switch(_type) {
-		case "walk":
+		case "roundpuff":
+			var _dir = 0
+			repeat(_amount) {
+				_dir += 360/_amount
+				spawn_particle({
+					group: _g,
+					
+					spr:			fx_bigdust,
+					px:				_x,
+					py:				_y,
+			        spd:			3,
+			        incrementspd:	-0.3,
+			        dir:			_dir,
+			        incrementdir:	0,
+					follow_dir:		false,
+			        life:			20,
+			        size:			1,
+					invertspeed:	false
+				})
+			}
+		break;
+		case "landground":
+			var _i = 0
+			repeat(_amount) {
+				var _dir = 0
+				var _xrange = 2*_i+1
+				if _i > _amount/2 {_xrange = -_xrange _dir = 180}
+				spawn_particle({
+					group: _g,
+					
+					spr:			fx_bigdust,
+			        px:				_x+_xrange,
+			        py:				_y,
+			        spd:			4,
+			        incrementspd:	-0.5,
+			        dir:			_dir,
+					follow_dir:		false,
+					invertspeed:	false,
+					life:			15,
+				})
+				_i++
+			}
 		break;
 	}
 }

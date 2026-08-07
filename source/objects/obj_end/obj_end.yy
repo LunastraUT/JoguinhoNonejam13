@@ -8,8 +8,8 @@
   "name":"obj_end",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"nao usado da silva",
+    "path":"folders/Objects/Objetos/nao usado da silva.yy",
   },
   "parentObjectId":null,
   "persistent":false,

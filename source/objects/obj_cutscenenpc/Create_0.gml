@@ -1,12 +1,13 @@
 event_inherited()
 
-spd = 0
+j_height = 2
+qnt_pulo = 0
+pode_pula = true
 
 //Animations
 	preloaded_animations = {
 		idle: asset_get_index("spr_gato_idle"),
 		walk: asset_get_index("spr_gato_walk"),
-		wallhang: asset_get_index("spr_gato_wallhang"),
 		fall: asset_get_index("spr_gato_fall"),
 		jump: asset_get_index("spr_gato_jump")
 	}
@@ -35,6 +36,28 @@ draw = function(_blend = image_blend, _alpha = image_alpha) {
 	shader_reset()
 }
 
+jump = function(_amount, _qnt_pulo = 1)
+{
+	return {
+		setup : false,
+		amount : _amount,
+		qntpulito : _qnt_pulo,
+		caller : id,
+		func : function(self)
+		{
+			if (!self.setup)
+			{
+				self.caller.j_height = self.amount
+				self.caller.qnt_pulo = self.qntpulito
+				
+				self.setup = true
+			}
+			return self.caller.grounded
+		}
+	}
+}
+
+
 move = function(_amount)
 {
 	return {
@@ -50,9 +73,9 @@ move = function(_amount)
 				self.setup = true
 			}
 
-			self.caller.spd = sign(self.amount)*1
+			self.caller.hsp = sign(self.amount)*1
 			if abs(self.caller.x - self.x_old) >= abs(self.amount) {
-				self.caller.spd = 0
+				self.caller.hsp = 0
 				return true	
 			}
 			return false

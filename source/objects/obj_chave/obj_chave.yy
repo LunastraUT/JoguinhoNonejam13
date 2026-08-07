@@ -12,8 +12,8 @@
   "name":"obj_chave",
   "overriddenProperties":[],
   "parent":{
-    "name":"Blocks",
-    "path":"folders/Objects/Blocks.yy",
+    "name":"Objetos",
+    "path":"folders/Objects/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

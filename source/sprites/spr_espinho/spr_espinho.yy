@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"os objetos",
-    "path":"folders/Sprites/os objetos.yy",
+    "name":"Bloquinhos",
+    "path":"folders/Sprites/Bloquinhos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
