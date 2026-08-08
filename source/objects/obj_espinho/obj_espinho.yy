@@ -35,5 +35,8 @@
     "path":"sprites/spr_espinho/spr_espinho.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

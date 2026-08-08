@@ -37,5 +37,8 @@
     "path":"sprites/spr_chavinha/spr_chavinha.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

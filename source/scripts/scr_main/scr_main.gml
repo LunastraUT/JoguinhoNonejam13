@@ -51,4 +51,6 @@ camera_set_view_size(view_camera[0], RES_W, RES_H)
 window_set_size(RES_W*3, RES_H*3)
 window_center()
 
+instance_create_depth(0, 0, 0, ma_pause)
+
 if DEBUG {room_goto(rm_debug)} else {room_goto(rm_menu)}

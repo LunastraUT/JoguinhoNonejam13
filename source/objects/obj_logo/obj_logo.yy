@@ -35,5 +35,8 @@
     "path":"sprites/spr_logo/spr_logo.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

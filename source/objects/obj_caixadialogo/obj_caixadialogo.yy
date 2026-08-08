@@ -36,5 +36,8 @@
     "path":"sprites/spr_diabox/spr_diabox.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

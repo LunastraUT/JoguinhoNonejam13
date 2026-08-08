@@ -34,5 +34,8 @@
     "path":"sprites/spr_fragile_block/spr_fragile_block.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

@@ -39,5 +39,8 @@
     "path":"sprites/spr_bolo/spr_bolo.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

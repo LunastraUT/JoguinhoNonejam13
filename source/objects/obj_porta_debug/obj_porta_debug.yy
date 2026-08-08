@@ -38,5 +38,8 @@
     "path":"sprites/spr_porta_debug/spr_porta_debug.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

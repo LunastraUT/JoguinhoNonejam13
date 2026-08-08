@@ -38,5 +38,8 @@
     "path":"sprites/spr_serra/spr_serra.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

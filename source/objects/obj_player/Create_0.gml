@@ -1,6 +1,8 @@
  // Inherit the parent event
 event_inherited();
 
+if !instance_exists(ma_hud) {instance_create_depth(0, 0, 0, ma_hud)}
+
 morte = function() 
 {
 	if current_state != "morreudasilva" {

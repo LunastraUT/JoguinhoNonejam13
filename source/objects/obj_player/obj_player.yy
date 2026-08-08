@@ -46,5 +46,8 @@
     "name":"spr_player",
     "path":"sprites/spr_player/spr_player.yy",
   },
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

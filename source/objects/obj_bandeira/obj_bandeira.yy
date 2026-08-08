@@ -35,5 +35,8 @@
     "path":"sprites/spr_bandeira_on/spr_bandeira_on.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

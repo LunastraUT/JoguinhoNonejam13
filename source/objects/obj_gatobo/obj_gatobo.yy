@@ -40,5 +40,8 @@
     "path":"sprites/spr_gatobo/spr_gatobo.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

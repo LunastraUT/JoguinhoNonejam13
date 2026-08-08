@@ -39,5 +39,8 @@
     "path":"sprites/spr_player/spr_player.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

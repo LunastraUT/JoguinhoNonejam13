@@ -34,5 +34,8 @@
     "path":"sprites/spr_boundcamera/spr_boundcamera.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

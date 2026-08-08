@@ -38,5 +38,8 @@
     "path":"sprites/spr_bateria/spr_bateria.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

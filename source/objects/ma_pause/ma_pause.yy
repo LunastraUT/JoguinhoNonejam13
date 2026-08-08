@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_end1",
+  "%Name":"ma_pause",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":76,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":75,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_end1",
+  "name":"ma_pause",
   "overriddenProperties":[],
   "parent":{
-    "name":"nao usado da silva",
-    "path":"folders/Objects/Objetos/nao usado da silva.yy",
+    "name":"Managers",
+    "path":"folders/Objects/Managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

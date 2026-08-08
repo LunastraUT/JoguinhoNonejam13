@@ -37,5 +37,8 @@
     "path":"sprites/spr_balao/spr_balao.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

@@ -38,5 +38,8 @@
     "path":"sprites/spr_copperblock_off/spr_copperblock_off.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

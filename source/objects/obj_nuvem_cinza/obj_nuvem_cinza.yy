@@ -36,5 +36,8 @@
     "path":"sprites/spr_nuvem_cinza/spr_nuvem_cinza.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

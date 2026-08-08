@@ -38,5 +38,8 @@
     "path":"sprites/spr_chave_roda/spr_chave_roda.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

@@ -36,5 +36,8 @@
     "path":"sprites/spr_nuvem/spr_nuvem.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

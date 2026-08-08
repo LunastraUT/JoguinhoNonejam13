@@ -37,5 +37,8 @@
     "path":"sprites/spr_mola_cobre/spr_mola_cobre.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

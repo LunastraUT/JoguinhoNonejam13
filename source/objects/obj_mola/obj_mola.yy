@@ -38,5 +38,8 @@
     "path":"sprites/spr_mola/spr_mola.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

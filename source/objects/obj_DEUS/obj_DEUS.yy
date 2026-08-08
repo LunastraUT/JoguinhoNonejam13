@@ -34,5 +34,8 @@
     "path":"sprites/spr_deus/spr_deus.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }
