@@ -10,3 +10,5 @@ updateCollision()
 if keyboard_check_pressed(vk_control) && keyboard_check(ord("D")) && DEBUG {
 	room_goto(rm_debug);	
 }
+
+if y > room_height+100 {morte()}

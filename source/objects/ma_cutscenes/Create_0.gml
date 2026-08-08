@@ -158,9 +158,15 @@ switch(global.question_data) {
 
     case "chip":
 		walking_away = function() {
-			waitList(wait(1))
-			waitList(mix([player.move(200), npc.move(200)]))
-			waitList(finish())
+			if escolha == 0 {
+				waitList(wait(1))
+				waitList(mix([player.move(200), npc.move(200)]))
+				waitList(finish())
+			} else {
+				waitList(wait(1))
+				waitList(player.move(200))
+				waitList(finish())
+			}
 		}
 		change_character("chip")
         setUpQuestion(

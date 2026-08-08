@@ -231,6 +231,9 @@ states[? "enterdoor"] = {
 	leave: function() {}
 }
 
+morreu = false
+subiu = false
+
 states[? "morreudasilva"] = {
 	create: function() {
 		hsp = 0
@@ -245,6 +248,10 @@ states[? "morreudasilva"] = {
 	},
 	update: function() {
 		update_air_physics()
+		if y > room_height+100 && !morreu && subiu {
+			transRights(room)
+			morreu = true
+		}
 	},
 	leave: function() {
 		
