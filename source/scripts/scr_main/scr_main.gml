@@ -3,7 +3,15 @@ randomise()
 global.bolos = 0
 
 global.particle_max = 200
-global.collisions = [obj_colisor, obj_bloco_cobre, obj_nuvem, obj_nuvem_cinza, obj_bloco_fragil, obj_bloco_da_chave]
+global.collisions = [
+	obj_colisor, 
+	obj_bloco_cobre, 
+	obj_nuvem, 
+	obj_nuvem_cinza, 
+	obj_bloco_fragil, 
+	obj_bloco_da_chave, 
+	obj_colisor_only_player
+]
 
 global.sfx_volume = 1
 global.music_volume = 1

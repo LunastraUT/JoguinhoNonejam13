@@ -1,7 +1,6 @@
 // Inherit the parent event
 event_inherited();
-
-cuspe_timer_max = 160		  
+	  
 cuspe_timer = cuspe_timer_max  
 
 preloaded_animations = {

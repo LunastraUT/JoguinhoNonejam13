@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_coletavel1",
+  "%Name":"obj_colisor_only_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_coletavel1",
+  "name":"obj_colisor_only_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objects/Objetos.yy",
+    "name":"Blocos",
+    "path":"folders/Objects/Blocos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_colisor_only_player",
+    "path":"sprites/spr_colisor_only_player/spr_colisor_only_player.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

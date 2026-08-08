@@ -8,9 +8,10 @@
       ],},
   ],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":9,
+    "SerialiseWidth":8,
+    "TileCompressedData":[-61,0,2,8,12,-6,0,3,22,26,0,],
+    "TileDataFormat":1,
   },
   "name":"grayTiles",
   "out_columns":12,

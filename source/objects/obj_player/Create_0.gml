@@ -1,7 +1,5 @@
-// Inherit the parent event
+ // Inherit the parent event
 event_inherited();
-
-depth = 25;
 
 morte = function() 
 {
@@ -232,7 +230,6 @@ states[? "enterdoor"] = {
 }
 
 morreu = false
-subiu = false
 
 states[? "morreudasilva"] = {
 	create: function() {
@@ -248,7 +245,7 @@ states[? "morreudasilva"] = {
 	},
 	update: function() {
 		update_air_physics()
-		if y > room_height+100 && !morreu && subiu {
+		if y > room_height+100 && !morreu {
 			transRights(room)
 			morreu = true
 		}

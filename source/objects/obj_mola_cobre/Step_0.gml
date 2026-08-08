@@ -5,7 +5,7 @@ if active {
 		image_index = image_number-1	
 	}
 }
-if place_meeting(x, bbox_top, obj_player) {
+if place_meeting(x, bbox_top, obj_player) && !obj_player.ignore_collision {
 	if !active {
 		obj_player.morte()
 	} else if obj_player.vsp > 0 {
