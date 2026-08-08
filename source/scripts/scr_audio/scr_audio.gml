@@ -16,8 +16,8 @@ function playMusic(_index) {
 	}
 	
 	var _music = audio_play_sound(_index, 10, true)
-	if global.current_music != noone {audio_sound_gain(global.current_music, 0, 5000)}
-	audio_sound_gain(_music, global.music_volume, 5000)
+	if global.current_music != noone {audio_sound_gain(global.current_music, 0, 0)}
+	audio_sound_gain(_music, global.music_volume, 0)
 	
 	global.current_music = _music
 	

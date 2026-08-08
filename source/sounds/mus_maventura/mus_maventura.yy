@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_plains",
+  "%Name":"mus_maventura",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":48.0,
+  "duration":131.50685,
   "exportDir":"",
-  "name":"mus_plains",
+  "name":"mus_maventura",
   "parent":{
     "name":"Music",
     "path":"folders/Sounds/Music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_plains.ogg",
+  "soundFile":"mus_maventura.ogg",
   "volume":1.0,
 }
