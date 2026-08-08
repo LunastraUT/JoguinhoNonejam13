@@ -33,7 +33,7 @@ global.collectables_data = {
 #macro DEBUG false
 #macro RES_W 320
 #macro RES_H 180
-
+ 
 display_set_gui_size(RES_W, RES_H)
 draw_set_font(fnt_main)
 

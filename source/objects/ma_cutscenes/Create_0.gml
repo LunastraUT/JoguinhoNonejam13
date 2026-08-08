@@ -13,7 +13,7 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 			{
 				for(var _dia = 0; _dia < instance_number(obj_caixadialogo); _dia++) {
 					var _dialog = instance_find(obj_caixadialogo, _dia)
-					_dialog.y_target -= 20	
+					_dialog.y_target -= 20+5*_dialog.image_yscale
 				}
 				
 				self.box = instance_create_layer(self.pos[0], self.pos[1], "Entities", obj_caixadialogo)
@@ -23,6 +23,8 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 				if self.sound != noone {
 					audio_play_sound(self.sound, 1, false)	
 				}
+				
+				self.box.reset()
 				
 				self.setup = true
 			}
@@ -73,13 +75,16 @@ escolha = 0
 resposta = ["ebaa", "affff"]
 world_to_go = ["world1a", "world1a"]
 
+walking_away = function() {
+	waitList(wait(1))
+	waitList(player.move(200))
+	waitList(finish())
+}
 final = function() {
 	waitList(mix([player.jump(2, escolha+1), spawnDiabox(opcoes[escolha], player, [xx, yy])]))
 	waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
 	
-	waitList(wait(1))
-	waitList(player.move(200))
-	waitList(finish())
+	walking_away()
 }
 
 camera = instance_create_depth(0, y+30, depth, obj_camera)
@@ -92,16 +97,99 @@ npc.cor_gato = global.gatos.amarelo
 waitList(mix([player.move(180), npc.move(-180)]))
 waitList(wait(1))
 
-xx = 50
+xx = 70
 yy = (room_height/2)-20
 
+function setUpQuestion(_question, _resposta, _worlds)
+{
+    world_to_go = _worlds
+    resposta = _resposta
+
+    waitList(spawnDiabox(_question, npc, [xx+50, yy], true))
+
+    waitList(spawnQuote(opcoes))
+}
+change_character = function(_char = "gato") {
+	npc.character = _char
+	npc.reset()	
+}
+
 switch(global.question_data) {
-	case "coelha":
-		world_to_go = ["world2a", "world2b"]
-		resposta = ["Colete todos!", "Ah, vou avisar o padeiro"]
-		
-		waitList(spawnDiabox("Voce gosta de bolo?", npc, [xx+70, yy], true))
-		
-		waitList(spawnQuote(opcoes))
-	break;
+    case "coelha":
+		change_character("coelha")
+        setUpQuestion(
+            "Voce gosta de bolo?",
+            ["Tente coletar todos!", "Ah, vou avisar o padeiro..."],
+            ["world2a", "world2b"]
+        )
+    break;
+    
+    case "raposo":
+		change_character("raposo")
+        setUpQuestion(
+            "Minhas molas sao tao uteis neh?",
+            ["Pena que a bateria acaba...", "PFFF... \ntanto faz..."],
+            ["world3a", "world3b"]
+        )
+    break;
+
+    case "cachorro":
+		change_character("cachorro")
+        setUpQuestion(
+            "Eh verdade que \ntu odeia meus bolos?",
+            ["Bom saber...", "Se safou dessa vez..."],
+            ["world3c", "world3d"]
+        )
+    break;
+
+    case "chip":
+		walking_away = function() {
+			waitList(wait(1))
+			waitList(mix([player.move(200), npc.move(200)]))
+			waitList(finish())
+		}
+		change_character("chip")
+        setUpQuestion(
+            "Oi! Quer visitar meu \nparque aquatico?",
+            ["Eba! Cuidado ", "Que pena... \na agua esta boa!"],
+            ["world4a", "world4b"]
+        )
+    break;
+
+    case "rato":
+		walking_away = function() {
+			waitList(wait(1))
+			waitList(mix([player.move(200), npc.move(200)]))
+			waitList(finish())
+		}
+		change_character("rato") 
+        setUpQuestion(
+            "Nao curte... molas...? \nVenha... meu laboratorio...",
+            ["...vamos nos... divertir.", "...era previsivel."],
+            ["world4c", "world4d"]
+        )
+    break;
+
+    case "pato":
+		walking_away = function() {
+			waitList(wait(1))
+			waitList(mix([player.move(200), npc.move(200)]))
+			waitList(finish())
+		}
+		change_character("pato")
+        setUpQuestion(
+            "Quack",
+            ["C=", "=C"],
+            ["world4e", "world4f"]
+        )
+    break;
+
+    case "urso":
+		change_character("ursao")
+        setUpQuestion(
+            "Pode passar esses bolos \npra cah parceiro.",
+            ["Agora vaza daqui!", "Tabom entao..."],
+            ["world4g", "world4h"]
+        )
+    break;
 }

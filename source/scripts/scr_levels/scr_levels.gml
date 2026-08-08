@@ -237,18 +237,22 @@ global.levels = ds_map_create()
 	]
 #endregion
 
-global.question_data = "tung"
+global.question_data = "rato"
 
 global.world = global.levels[? "world1a"]
 global.level = global.world[0]
 
 function levarparaoproximolevel() {
-	transRights(global.level.go_to)
+	var _nextRoom = global.level.go_to
+	if room == rm_menu {_nextRoom = rm_lv1_a} //preguica gambiarrar
+	transRights(_nextRoom)
 	
 	var _next = array_get_index(global.world, global.level)+1
 	if array_length(global.world) <= _next {
 		global.question_data = global.level.question_data
 	} else {
+		if room == rm_menu {_next = 0}
+		
 		global.level = global.world[_next]	
 	}
 }
