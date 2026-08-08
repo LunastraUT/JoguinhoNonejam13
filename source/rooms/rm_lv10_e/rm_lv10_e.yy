@@ -50,7 +50,7 @@
   "name":"rm_lv10_e",
   "parent":{
     "name":"Mundo4",
-    "path":"folders/Rooms/Mundo4.yy",
+    "path":"folders/Rooms/Leveis/Mundo4.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

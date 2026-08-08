@@ -1,15 +1,15 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rm_question_bunni",
+  "%Name":"rm_question_coelha",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_4BC4782F1","path":"rooms/rm_question_bunni/rm_question_bunni.yy",},
-    {"name":"inst_79AB7C8_1","path":"rooms/rm_question_bunni/rm_question_bunni.yy",},
-    {"name":"inst_78A5A9E2_1","path":"rooms/rm_question_bunni/rm_question_bunni.yy",},
-    {"name":"inst_75811CF9_1","path":"rooms/rm_question_bunni/rm_question_bunni.yy",},
+    {"name":"inst_4BC4782F1","path":"rooms/rm_question_coelha/rm_question_coelha.yy",},
+    {"name":"inst_79AB7C8_1","path":"rooms/rm_question_coelha/rm_question_coelha.yy",},
+    {"name":"inst_78A5A9E2_1","path":"rooms/rm_question_coelha/rm_question_coelha.yy",},
+    {"name":"inst_75811CF9_1","path":"rooms/rm_question_coelha/rm_question_coelha.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -47,10 +47,10 @@
     {"$GMRBackgroundLayer":"","%Name":"BG0","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"BG0","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_inicio_0","path":"sprites/spr_inicio_0/spr_inicio_0.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":20,},
     {"$GMRBackgroundLayer":"","%Name":"BG","animationFPS":15.0,"animationSpeedType":0,"colour":4289396735,"depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"BG","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rm_question_bunni",
+  "name":"rm_question_coelha",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Questions",
+    "path":"folders/Rooms/Questions.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

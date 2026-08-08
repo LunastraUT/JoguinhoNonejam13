@@ -96,12 +96,12 @@ xx = 50
 yy = (room_height/2)-20
 
 switch(global.question_data) {
-	case "world1a":
+	case "coelha":
 		world_to_go = ["world2a", "world2b"]
-		resposta = ["Ah otimo!", "Vou avisar o padeiro :c"]
+		resposta = ["Colete todos!", "Ah, vou avisar o padeiro"]
 		
-		waitList(spawnDiabox("vc gosta de bolo?", npc, [xx+70, yy], true))
-
+		waitList(spawnDiabox("Voce gosta de bolo?", npc, [xx+70, yy], true))
+		
 		waitList(spawnQuote(opcoes))
 	break;
 }

@@ -47,8 +47,7 @@ fix_pos = function() {
 }
 
 parallax_data = [
-	[new BGElement("BG1", [5, 20]), 
+	new BGElement("BG1", [5, 20]), 
 	new BGElement("BG2", [10, 20]),
 	new BGElement("BG0", [10, 20], [0, 0], [1, 0])
-	]
 ]

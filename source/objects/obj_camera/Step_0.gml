@@ -147,9 +147,9 @@ camera_set_view_pos(view_camera[0], x, y)
 camera_set_view_size(view_camera[0], res_w, res_h)
 
 
-/*Parallax
-for(var _bg = 0; _bg < array_length(parallax_data[global.level-1]); _bg++) {
-	var _data = parallax_data[global.level-1][_bg]
+//Parallax
+for(var _bg = 0; _bg < array_length(parallax_data); _bg++) {
+	var _data = parallax_data[_bg]
 	var _layerId = layer_get_id(_data.layer_name)
 		
 	if _data.update != -1 {_data.update(_data)}
@@ -163,4 +163,4 @@ for(var _bg = 0; _bg < array_length(parallax_data[global.level-1]); _bg++) {
 	var _y = _data.position[1]
 	layer_x(_layerId, (x+_x)/_data.parallax[0])
 	layer_y(_layerId, (y+_y)/_data.parallax[1])
-}*/
+}

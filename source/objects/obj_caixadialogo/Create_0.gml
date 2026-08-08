@@ -16,7 +16,7 @@ reset = function() {
 	typing = 0 
 	timer = 0
 	
-	normal_width = 1+0.085*max_typing
+	normal_width = 1+0.09*max_typing
 	normal_height = 0.5
 
 	image_xscale = normal_width
