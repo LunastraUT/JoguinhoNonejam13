@@ -1,4 +1,4 @@
 //destroy quando acaba a anim yeah
-if collected == true {
+if sprite_index == spr_chave_pega {
 	image_alpha = 0;
 }

@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fragile_block",
-    "path":"sprites/spr_fragile_block/spr_fragile_block.yy",
+    "name":"spr_keyblock",
+    "path":"sprites/spr_keyblock/spr_keyblock.yy",
   },
   "spriteMaskId":null,
   "visible":true,

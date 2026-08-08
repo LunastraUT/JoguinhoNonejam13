@@ -21,10 +21,11 @@ morte = function()
 
 //Animations
 	preloaded_animations = {
-		idle: asset_get_index("spr_gato_idle"),
-		walk: asset_get_index("spr_gato_walk"),
-		fall: asset_get_index("spr_gato_fall"),
-		jump: asset_get_index("spr_gato_jump")
+		idle: spr_gato_idle,
+		walk: spr_gato_walk,
+		fall: spr_gato_fall,
+		jump: spr_gato_jump,
+		dead: spr_gato_dead
 	}
 //     
  
@@ -233,9 +234,11 @@ states[? "enterdoor"] = {
 states[? "morreudasilva"] = {
 	create: function() {
 		hsp = 0
+		vsp = -3
 		
-		vsp = -5
-		if y > room_height {vsp = -7} 
+		playAnim("dead");
+		
+		if y > room_height {vsp = -5} 
 		
 		ignore_collision = true
 		playSFX(snd_death)

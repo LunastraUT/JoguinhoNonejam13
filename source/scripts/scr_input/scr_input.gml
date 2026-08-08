@@ -21,7 +21,7 @@ global.inputs = {
 		pads: [gp_padu],
 	},
 	jump: {
-		keys: [ord("C"), ord("L")],
+		keys: [vk_space],
 		pads: [gp_face1],
 	},
 	pause: {
@@ -29,11 +29,11 @@ global.inputs = {
 		pads: [gp_start],
 	},
 	confirm: {
-		keys: [vk_enter, ord("Z")],
+		keys: [vk_enter, vk_space],
 		pads: [gp_face1, gp_start],
 	},
 	back: {
-		keys: [vk_escape],
+		keys: [vk_escape, vk_backspace],
 		pads: [gp_face2],
 	}
 };
