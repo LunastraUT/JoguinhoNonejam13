@@ -1,21 +1,23 @@
 if disabled {
 	sprite_index = noone
 	alpha_target = 0
-	y_target = ystart
+	//y_target = ystart
 	disabled_timer--
 } else {
+	aumentamais += 0.1;
+	aumenta += 0.05 * aumentamais;
 	if place_meeting(x, y-6, obj_player){
 		if obj_player.vsp >= 0 && obj_player.grounded == false {
 			obj_player.y = y - 16;
 			obj_player.grounded = true
 		}
 		
-		y_target = ystart+1;
+		y_target = ystart+1 + aumenta;
 		rest_timer = rest_timer_max
 
 		stepped = true
 	} else {
-		y_target = ystart
+		//y_target = ystart
 		
 		if stepped {
 			disabled = true
