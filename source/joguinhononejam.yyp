@@ -219,6 +219,8 @@
     {"id":{"name":"spr_floresta_1","path":"sprites/spr_floresta_1/spr_floresta_1.yy",},},
     {"id":{"name":"spr_floresta_2","path":"sprites/spr_floresta_2/spr_floresta_2.yy",},},
     {"id":{"name":"spr_fragile_block","path":"sprites/spr_fragile_block/spr_fragile_block.yy",},},
+    {"id":{"name":"spr_gato_cake_white","path":"sprites/spr_gato_cake_white/spr_gato_cake_white.yy",},},
+    {"id":{"name":"spr_gato_cake","path":"sprites/spr_gato_cake/spr_gato_cake.yy",},},
     {"id":{"name":"spr_gato_dead_white","path":"sprites/spr_gato_dead_white/spr_gato_dead_white.yy",},},
     {"id":{"name":"spr_gato_dead","path":"sprites/spr_gato_dead/spr_gato_dead.yy",},},
     {"id":{"name":"spr_gato_fall_white","path":"sprites/spr_gato_fall_white/spr_gato_fall_white.yy",},},

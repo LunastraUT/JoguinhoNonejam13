@@ -23,6 +23,10 @@ if grounded {
 	} else {
 		skew_max = 0
 		playAnim("idle", true)	
+		
+		if olhar != noone {
+			looking_at = -sign(x-olhar.x)	
+		}
 	}
 } else {
 	pode_pula = true
@@ -31,5 +35,13 @@ if grounded {
 		playAnim("jump", false, 1)	
 	} else {
 		playAnim("fall", false, 1)
+	}
+}
+
+if comer != noone && olhar != noone {
+	if point_distance(x, y, comer.x, comer.y) < 20 {
+			olhar = noone
+			playAnim("bite", false, 3)
+			alarm[0] = 15
 	}
 }

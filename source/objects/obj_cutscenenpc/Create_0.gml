@@ -6,6 +6,9 @@ pode_pula = true
 
 character = "gato"
 
+olhar = noone
+comer = noone
+
 //Animations
 reset = function() {
 	preloaded_animations = {

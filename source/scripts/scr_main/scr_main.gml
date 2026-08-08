@@ -1,5 +1,7 @@
 randomise()
 
+global.bolos = 0
+
 global.particle_max = 200
 global.collisions = [obj_colisor, obj_bloco_cobre, obj_nuvem, obj_bloco_fragil, obj_bloco_da_chave]
 

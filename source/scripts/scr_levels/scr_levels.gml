@@ -237,7 +237,7 @@ global.levels = ds_map_create()
 	]
 #endregion
 
-global.question_data = "rato"
+global.question_data = "coelha"
 
 global.world = global.levels[? "world1a"]
 global.level = global.world[0]

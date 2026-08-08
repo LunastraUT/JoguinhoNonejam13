@@ -13,7 +13,7 @@ function spawnDiabox(_text, _target, _pos = [0, 0], _right = false, _snd = noone
 			{
 				for(var _dia = 0; _dia < instance_number(obj_caixadialogo); _dia++) {
 					var _dialog = instance_find(obj_caixadialogo, _dia)
-					_dialog.y_target -= 20+5*_dialog.image_yscale
+					_dialog.y_target -= 30+10*_dialog.image_yscale
 				}
 				
 				self.box = instance_create_layer(self.pos[0], self.pos[1], "Entities", obj_caixadialogo)
@@ -90,8 +90,9 @@ final = function() {
 camera = instance_create_depth(0, y+30, depth, obj_camera)
 camera.cam_state = camera_states.quotes
 
-player = instance_create_layer(-50, 144, "Entities", obj_cutscenenpc)
-npc = instance_create_layer(room_width+50, 144, "Entities" ,obj_cutscenenpc)
+player = instance_create_layer(-50, 130, "Entities", obj_cutscenenpc)
+npc = instance_create_layer(room_width+50, 130, "Entities" ,obj_cutscenenpc)
+npc.olhar = player
 npc.cor_gato = global.gatos.amarelo
 
 waitList(mix([player.move(180), npc.move(-180)]))
@@ -125,9 +126,22 @@ switch(global.question_data) {
     break;
     
     case "raposo":
+		walking_away = function() {
+			if escolha == 0 {
+				waitList(wait(1))
+				waitList(player.move(200))
+				waitList(finish())
+			} else {
+				npc.preloaded_animations.walk = spr_raposo_walk_mad
+				
+				waitList(wait(1))
+				waitList(mix([player.move(200), npc.move(-200)]))
+				waitList(finish())
+			}
+		}
 		change_character("raposo")
         setUpQuestion(
-            "Minhas molas sao tao uteis neh?",
+            "Minhas molas sao \ntao uteis neh?",
             ["Pena que a bateria acaba...", "PFFF... \ntanto faz..."],
             ["world3a", "world3b"]
         )
@@ -158,9 +172,11 @@ switch(global.question_data) {
 
     case "rato":
 		walking_away = function() {
-			waitList(wait(1))
-			waitList(mix([player.move(200), npc.move(200)]))
-			waitList(finish())
+			if escolha == 1 {
+				waitList(wait(1))
+				waitList(mix([player.move(200), npc.move(200)]))
+				waitList(finish())
+			}
 		}
 		change_character("rato") 
         setUpQuestion(
@@ -173,7 +189,16 @@ switch(global.question_data) {
     case "pato":
 		walking_away = function() {
 			waitList(wait(1))
-			waitList(mix([player.move(200), npc.move(200)]))
+			
+			if escolha == 0 {
+				npc.preloaded_animations.idle = spr_pato_happy
+				waitList(mix([player.move(200), npc.move(200)]))
+			} else {
+				npc.preloaded_animations.idle = spr_pato_sad
+				waitList(player.move(200))
+			}
+			npc.playAnim("idle", true, 0, true)
+			
 			waitList(finish())
 		}
 		change_character("pato")
@@ -185,6 +210,47 @@ switch(global.question_data) {
     break;
 
     case "urso":
+		walking_away = function() {
+			var _viroujanta = false
+			if escolha == 1 {
+				_viroujanta = true
+			} else {
+				if global.bolos >= 1 {
+					npc.preloaded_animations.bite = spr_ursao_bite
+					player.preloaded_animations.idle = spr_gato_cake
+					npc.playAnim("bite", false, 3, true)
+					player.playAnim("idle", false)
+					waitList(wait(1))
+					waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
+					
+					waitList(wait(1))
+					waitList(player.move(200))
+					waitList(finish())
+				} else {
+					waitList(spawnDiabox("Hm. cade?", npc, [xx+50, yy], true))
+					_viroujanta = true
+				}
+			}
+			if _viroujanta {
+				npc.preloaded_animations.bite = spr_ursao_bite
+				npc.comer = player
+				
+				waitList(npc.move(25))
+				waitList(wait(1))
+				waitList(player.move(200))
+				waitList(finish())
+				
+				world_to_go[0] = "world4h"
+			}
+		}
+		
+		final = function() {
+			if escolha == 1 {waitList(player.jump(2, escolha+1))}
+			waitList(spawnDiabox(opcoes[escolha], player, [xx, yy]))
+			
+			walking_away()
+		}
+		
 		change_character("ursao")
         setUpQuestion(
             "Pode passar esses bolos \npra cah parceiro.",
