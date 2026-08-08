@@ -276,6 +276,7 @@
     {"id":{"name":"spr_transition_in","path":"sprites/spr_transition_in/spr_transition_in.yy",},},
     {"id":{"name":"spr_transition_out","path":"sprites/spr_transition_out/spr_transition_out.yy",},},
     {"id":{"name":"spr_ursao_bite","path":"sprites/spr_ursao_bite/spr_ursao_bite.yy",},},
+    {"id":{"name":"spr_ursao_bite2","path":"sprites/spr_ursao_bite2/spr_ursao_bite2.yy",},},
     {"id":{"name":"spr_ursao_idle","path":"sprites/spr_ursao_idle/spr_ursao_idle.yy",},},
     {"id":{"name":"spr_ursao_walk","path":"sprites/spr_ursao_walk/spr_ursao_walk.yy",},},
     {"id":{"name":"spr_vore_0","path":"sprites/spr_vore_0/spr_vore_0.yy",},},

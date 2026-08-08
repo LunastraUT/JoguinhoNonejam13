@@ -216,7 +216,7 @@ switch(global.question_data) {
 				_viroujanta = true
 			} else {
 				if global.bolos >= 1 {
-					npc.preloaded_animations.bite = spr_ursao_bite
+					npc.preloaded_animations.bite = spr_ursao_bite2
 					player.preloaded_animations.idle = spr_gato_cake
 					npc.playAnim("bite", false, 3, true)
 					player.playAnim("idle", false)
