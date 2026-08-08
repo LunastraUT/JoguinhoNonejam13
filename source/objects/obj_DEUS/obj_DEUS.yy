@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_deus",
+    "path":"sprites/spr_deus/spr_deus.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

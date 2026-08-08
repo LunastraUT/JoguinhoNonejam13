@@ -7,10 +7,12 @@ if disabled {
 	if place_meeting(x, y-6, obj_player){
 		if obj_player.vsp >= 0 && obj_player.grounded == false {
 			obj_player.y = y - 16;
+			obj_player.vsp = 0;
 			obj_player.grounded = true
 		}
 		//aumentafoda
-		aumentamais += 4.0;
+		
+		aumentamais = clamp(aumentamais + 4.0, 0, 64.0);
 		aumenta += 0.01 * aumentamais;
 	
 		y_target = ystart+1 + aumenta;

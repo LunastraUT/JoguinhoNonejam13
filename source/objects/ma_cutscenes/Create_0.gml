@@ -70,7 +70,7 @@ finish = function() {
 	}
 }
 
-opcoes = ["SIM", "NAO"]
+opcoes = ["Sim", "Não"]
 escolha = 0
 resposta = ["ebaa", "affff"]
 world_to_go = ["world1a", "world1a"]
@@ -119,8 +119,8 @@ switch(global.question_data) {
     case "coelha":
 		change_character("coelha")
         setUpQuestion(
-            "Voce gosta de bolo?",
-            ["Tente coletar todos!", "Ah, vou avisar o padeiro..."],
+            "Você gosta de bolo?",
+            ["Tente encontrar todos!", "Ah, vou avisar o \npadeiro então..."],
             ["world2a", "world2b"]
         )
     break;
@@ -141,8 +141,8 @@ switch(global.question_data) {
 		}
 		change_character("raposo")
         setUpQuestion(
-            "Minhas molas sao \ntao uteis neh?",
-            ["Pena que a bateria acaba...", "PFFF... \ntanto faz..."],
+            "Essas minhas molas são \ntão úteis né?",
+            ["Pena que a bateria é\n limitada...", "PFFF... \ntanto faz..."],
             ["world3a", "world3b"]
         )
     break;
@@ -150,8 +150,8 @@ switch(global.question_data) {
     case "cachorro":
 		change_character("cachorro")
         setUpQuestion(
-            "Eh verdade que \ntu odeia meus bolos?",
-            ["Bom saber...", "Se safou dessa vez..."],
+            "É verdade que \ntu odeia meus bolos?",
+            ["Pode deixar que vou fazer\n de outros sabores \nespecialmente pra você...", "Se safou dessa vez..."],
             ["world3c", "world3d"]
         )
     break;
@@ -170,8 +170,8 @@ switch(global.question_data) {
 		}
 		change_character("chip")
         setUpQuestion(
-            "Oi! Quer visitar meu \nparque aquatico?",
-            ["Eba! Cuidado ", "Que pena... \na agua esta boa!"],
+            "Oii! Quer visitar meu \nparque aquático?",
+            ["Eba! Cuidado pra não se afogar!", "Oxe gente... \nmas a água está tão boa..."],
             ["world4a", "world4b"]
         )
     break;
@@ -186,8 +186,8 @@ switch(global.question_data) {
 		}
 		change_character("rato") 
         setUpQuestion(
-            "Nao curte... molas...? \nVenha... meu laboratorio...",
-            ["...vamos nos... divertir.", "...era previsivel."],
+            "Não cúrtê... môlas...? \nVênhá... mêu labôrátóriô...",
+            ["...vamôs nos... divêrtír.", "...é o que todôs dizêm..."],
             ["world4c", "world4d"]
         )
     break;
@@ -210,7 +210,7 @@ switch(global.question_data) {
 		change_character("pato")
         setUpQuestion(
             "Quack",
-            ["C=", "=C"],
+            [":)", ":("],
             ["world4e", "world4f"]
         )
     break;
@@ -233,7 +233,7 @@ switch(global.question_data) {
 					waitList(player.move(200))
 					waitList(finish())
 				} else {
-					waitList(spawnDiabox("Hm. cade?", npc, [xx+50, yy], true))
+					waitList(spawnDiabox("Hm. Cadê???", npc, [xx+50, yy], true))
 					_viroujanta = true
 				}
 			}
@@ -259,8 +259,8 @@ switch(global.question_data) {
 		
 		change_character("ursao")
         setUpQuestion(
-            "Pode passar esses bolos \npra cah parceiro.",
-            ["Agora vaza daqui!", "Tabom entao..."],
+            "Pode passa esses bolo \npra ka parcero.",
+            ["Agora xispa daqui!", "Tabão então..."],
             ["world4g", "world4h"]
         )
     break;

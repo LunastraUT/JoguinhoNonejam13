@@ -27,8 +27,9 @@ switch(state) {
 			obj_player.changeState("enterdoor")
 		}
 		
-		fakexscale = 1;
-		fakeyscale = 1;
+		//faça o lerp meu filho
+		fakexscale = lerp(fakexscale, 1, 0.15);
+		fakeyscale = lerp(fakeyscale, 1, 0.15);
 				
 		if image_index >= image_number-1 {
 			levarparaoproximolevel(next_level)
