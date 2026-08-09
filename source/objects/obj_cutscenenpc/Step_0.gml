@@ -4,7 +4,7 @@ event_inherited();
 update_air_physics()
 
 skew = lerp(skew, skew_max, 0.8)
-final_hsp = lerp(final_hsp, hsp, 0.1)
+final_hsp = lerp(final_hsp, hsp * spd, 0.1)
 final_vsp = vsp
 
 hasCollision()

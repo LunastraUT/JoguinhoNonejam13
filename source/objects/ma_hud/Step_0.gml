@@ -1,4 +1,9 @@
-if INPUT_PAUSE && !is_paused {pause()} else {
+if !is_paused {
+	if INPUT_PAUSE {
+		pause();
+	}
+}
+else {
 	
 	if INPUT_BACK {unpause()}
 	
@@ -9,9 +14,9 @@ if INPUT_PAUSE && !is_paused {pause()} else {
 		switch(option_list[option_selected])
 		{
 			case "retomar": unpause() break;
-			case "configurar": change_list(option_list_options) break;
 			case "reiniciar nivel": transRights(room) unpause() break;
-			case "sair": game_end() break;
+			case "configurar": change_list(option_list_options) break;	
+			case "sair": game_restart() break;
 			
 			case "voltar": change_list(option_list_menu) break;
 			case "musica:": 

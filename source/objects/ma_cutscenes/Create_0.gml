@@ -178,11 +178,17 @@ switch(global.question_data) {
 
     case "rato":
 		walking_away = function() {
-			if escolha == 1 {
+			if escolha == 0 {
 				waitList(wait(1))
 				waitList(mix([player.move(200), npc.move(200)]))
-				waitList(finish())
+			} else {
+				waitList(wait(1))
+				waitList(player.move(200))
+				waitList(wait(1))
+				waitList(npc.move(200, 8))
+				
 			}
+				waitList(finish())
 		}
 		change_character("rato") 
         setUpQuestion(

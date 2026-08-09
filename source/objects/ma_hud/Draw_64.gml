@@ -23,14 +23,16 @@ if is_paused
 		draw_set_colour(c_white)
 		draw_set_alpha(_i == option_selected ? 1.0 : 0.4)	
 		
-		draw_set_font(fnt_main)
+		draw_set_font(fnt_options)
 		draw_text(
 			_x,
 			_y+_sep*_i, string_upper(option_list[_i]) + _extra
 		)
 	}
+	
 
 	// resetando o texto pro default vai que da bosta neh
+	draw_set_font(fnt_main)
 	draw_set_colour(c_black)
 	draw_set_alpha(1.0)
 	draw_set_halign(fa_left);

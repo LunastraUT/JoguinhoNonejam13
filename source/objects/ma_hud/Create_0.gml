@@ -15,8 +15,8 @@ unpause = function()
 }
 option_list_menu = [
 	"retomar",
-	"configurar",
 	"reiniciar nivel",
+	"configurar",
 	"sair"
 ]
 option_list_options = [

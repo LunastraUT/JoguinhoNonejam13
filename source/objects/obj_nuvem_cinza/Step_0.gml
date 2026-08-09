@@ -1,6 +1,6 @@
 if disabled {
-	sprite_index = noone
-	sprite_index = spr_nuvem_poof
+
+	sprite_index = spr_nuvem_cinza_poof
 	//y_target = ystart
 	disabled_timer--
 } else {
