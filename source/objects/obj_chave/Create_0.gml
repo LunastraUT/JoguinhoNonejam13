@@ -1,6 +1,9 @@
 sinthing = 0
 costhing = 0
 
+quantaschaveporra = instance_count;
+randomsoundpitch = random_range(0.9, 1.1);
+
 depth = 50;
 
 collectTimer = 0;

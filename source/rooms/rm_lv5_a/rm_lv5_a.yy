@@ -44,7 +44,7 @@
   "layers":[
     {"$GMRTileLayer":"","%Name":"TILES4","depth":-150,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TILES4","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":31,"TileCompressedData":[
           -25,-2147483648,2,19,49,-4,47,-26,-2147483648,2,19,49,-3,47,-25,-2147483648,-2,0,4,19,21,49,47,-25,-2147483648,
-          -4,0,2,19,21,-25,-2147483648,-6,0,-25,-2147483648,-6,0,-186,-2147483648,
+          -4,0,2,19,21,-25,-2147483648,-6,0,-25,-2147483648,-6,0,-135,-2147483648,1,0,-50,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"mainTiles","path":"tilesets/mainTiles/mainTiles.yy",},"userdefinedDepth":true,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"CameraBounds","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_15B57C5E2_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15B57C5E2_1","objectId":{"name":"ma_transition","path":"objects/ma_transition/ma_transition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":304.0,},

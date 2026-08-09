@@ -33,7 +33,7 @@ ignore_collision = false
 	
 	//ásghua
 	underwater = false
-	grav_underwater = 0.15
+	grav_underwater = 0.06
 	spd_underwater = 1
 	vsp_max_underwater = 0.67
 //

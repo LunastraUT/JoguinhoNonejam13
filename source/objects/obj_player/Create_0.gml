@@ -2,6 +2,7 @@
 event_inherited();
 
 depth -= 50
+keyPerLevelValue = 0; //pra aumentar o pitch das chaves
 
 if !instance_exists(ma_hud) {instance_create_depth(0, 0, 0, ma_hud)}
 

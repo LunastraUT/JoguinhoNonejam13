@@ -1,5 +1,9 @@
 destroying = false
-destroy_time = 5
+if (instance_number(obj_chave_do_bloco) == 1) {
+	destroy_time = obj_chave_do_bloco.destroy_time;
+} else {
+	destroy_time = 8;
+}
 
 
 function morteinstantanea() { //deve ter um jeito melhor mas eu to com sono

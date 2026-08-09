@@ -9,8 +9,8 @@
   "name":"obj_bandeira",
   "overriddenProperties":[],
   "parent":{
-    "name":"nao usado da silva",
-    "path":"folders/Objects/Objetos/nao usado da silva.yy",
+    "name":"Objetos",
+    "path":"folders/Objects/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -34,5 +34,5 @@
     "path":"sprites/spr_colisor_only_player/spr_colisor_only_player.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

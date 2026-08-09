@@ -23,7 +23,7 @@ underwater = place_meeting(x, y, obj_aguinha)
 if underwater {
 	spd = spd_underwater 
 	grav = grav_underwater
-	vsp_max = vsp_max_underwater
+	vsp_max = lerp(vsp_max, vsp_max_underwater, 0.15);
 } 
 else {
 	spd = spd_default 

@@ -1,6 +1,6 @@
 if disabled {
 	sprite_index = noone
-	alpha_target = 0
+	sprite_index = spr_nuvem_poof
 	//y_target = ystart
 	disabled_timer--
 } else {
@@ -29,4 +29,3 @@ if disabled {
 }
 
 y = lerp(y, y_target, 0.1)
-image_alpha = lerp(image_alpha, alpha_target, 0.1)

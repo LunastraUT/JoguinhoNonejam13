@@ -1,7 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"obj_aguinha",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_bloco_cobre","path":"objects/obj_bloco_cobre/obj_bloco_cobre.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_aguinha",
   "overriddenProperties":[],
@@ -9,7 +13,10 @@
     "name":"Blocos",
     "path":"folders/Objects/Blocos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_dano",
+    "path":"objects/par_dano/par_dano.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,5 +39,8 @@
     "path":"sprites/spr_aguinha/spr_aguinha.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausavel",
+  ],
   "visible":true,
 }

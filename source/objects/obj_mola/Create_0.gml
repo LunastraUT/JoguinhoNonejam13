@@ -8,6 +8,12 @@ final_vsp = 0
 hsp = 0
 vsp = 0
 
+if has_grav == false {
+	molasprite = spr_mola;
+} else {
+	molasprite = spr_mola_azul;
+}
+
 image_index = image_number-1
 boing_height = 5.5
 
@@ -22,9 +28,9 @@ function checabateria() {
 		}
 	} else {
 		active = true;
-		if sprite_index != spr_mola	{
+		if sprite_index != molasprite	{
 			image_index = 3;
-			sprite_index = spr_mola;
+			sprite_index = molasprite;
 		}
 	}	
 }

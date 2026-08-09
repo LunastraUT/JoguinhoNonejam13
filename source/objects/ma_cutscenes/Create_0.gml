@@ -120,7 +120,7 @@ switch(global.question_data) {
 		change_character("coelha")
         setUpQuestion(
             "Você gosta de bolo?",
-            ["Tente encontrar todos!", "Ah, vou avisar o \npadeiro então..."],
+            ["Deve ter mais bolozn pelo caminho da\n floresta", "Ah, vou avisar o \npadeiro então..."],
             ["world2a", "world2b"]
         )
     break;

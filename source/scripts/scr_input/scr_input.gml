@@ -21,7 +21,7 @@ global.inputs = {
 		pads: [gp_padu],
 	},
 	jump: {
-		keys: [vk_space],
+		keys: [vk_space, ord("Z"), ord("L")],
 		pads: [gp_face1],
 	},
 	pause: {

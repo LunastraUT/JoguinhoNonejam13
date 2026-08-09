@@ -25,6 +25,7 @@ switch(state) {
 		if sprite_index != spr_porta_end {
 			sprite_index = spr_porta_end;
 			obj_player.changeState("enterdoor")
+			playSFX(snd_levelend)
 		}
 		
 		//faça o lerp meu filho

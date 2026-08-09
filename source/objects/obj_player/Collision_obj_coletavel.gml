@@ -1,5 +1,13 @@
 if other.collected == false { //coleta
-	other.collected = true;
-	global.bolos++
-	playSFX(snd_bolin)
+	
+		other.collected = true;
+	
+	if other.harmful == false { //MORRE
+		
+		global.bolos++
+		playSFX(snd_bolin)
+	} else {
+		morte();
+		playSFX(snd_tchuwa)
+	}
 }

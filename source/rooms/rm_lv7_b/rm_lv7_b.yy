@@ -38,8 +38,8 @@
         {"$GMRInstance":"v4","%Name":"inst_63B2D1AD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63B2D1AD","objectId":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":224.0,"y":128.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"TILES3","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TILES3","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
-          -161,0,1,115,-3,89,1,117,-8,0,1,115,-3,89,4,117,0,0,85,-3,57,1,99,-8,0,1,85,-3,57,4,99,0,0,85,-3,57,
-          1,99,-8,0,1,85,-3,57,4,99,0,0,85,-3,57,1,99,-8,0,1,85,-3,57,2,99,0,
+          -161,0,1,115,-3,89,1,117,-8,0,1,28,-3,14,4,28,0,0,85,-3,57,1,99,-8,0,1,28,-3,57,4,28,0,0,85,-3,57,1,
+          99,-8,0,1,28,-3,57,4,28,0,0,85,-3,57,1,99,-8,0,1,42,-3,57,2,42,0,
         ],"TileDataFormat":1,},"tilesetId":{"name":"grayTiles","path":"tilesets/grayTiles/grayTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"TILES2","depth":400,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"TILES2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
           -148,0,4,9,11,11,10,-16,0,4,37,51,51,38,-16,0,4,37,51,51,38,-16,0,4,37,51,51,38,-16,0,4,37,51,51,38,

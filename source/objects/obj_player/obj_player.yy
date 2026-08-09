@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gato_bolo",
-    "path":"sprites/spr_gato_bolo/spr_gato_bolo.yy",
+    "name":"spr_gato_cake",
+    "path":"sprites/spr_gato_cake/spr_gato_cake.yy",
   },
   "spriteMaskId":{
     "name":"spr_player",
