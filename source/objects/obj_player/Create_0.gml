@@ -241,7 +241,7 @@ states[? "morreudasilva"] = {
 		hsp = 0
 		vsp = -3
 		
-		playAnim("dead");
+		playAnim("dead", true, 5, true);
 		
 		if y > room_height {vsp = -5} 
 		
