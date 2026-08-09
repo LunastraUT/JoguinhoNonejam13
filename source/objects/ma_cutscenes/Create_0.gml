@@ -171,7 +171,7 @@ switch(global.question_data) {
 		change_character("chip")
         setUpQuestion(
             "Oii! Quer visitar meu \nparque aquático?",
-            ["Eba! Cuidado pra não se afogar!", "Oxe gente... \nmas a água está tão boa..."],
+            ["Eba! Cuidado pra \nnão se afogar!", "Oxe gente... \nmas a água está tão boa..."],
             ["world4a", "world4b"]
         )
     break;

@@ -1,5 +1,7 @@
- // Inherit the parent event
+  // Inherit the parent event
 event_inherited();
+
+depth -= 50
 
 if !instance_exists(ma_hud) {instance_create_depth(0, 0, 0, ma_hud)}
 
@@ -27,7 +29,7 @@ morte = function()
 		jump: spr_gato_jump,
 		dead: spr_gato_dead
 	}
-//     
+//
  
 cor_gato = global.gatos.rosa
 

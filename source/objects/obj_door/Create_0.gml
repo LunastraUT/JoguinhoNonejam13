@@ -1,5 +1,4 @@
 //sim eu vou fazer isso com sono hihi
-depth = obj_player.depth+1
 
 sprite_index = spr_porta_off;
 state = "inactive";
