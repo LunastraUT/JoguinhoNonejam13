@@ -185,10 +185,10 @@ switch(global.question_data) {
 				waitList(wait(1))
 				waitList(player.move(200))
 				waitList(wait(1))
-				waitList(npc.move(200, 8))
+				waitList(npc.move(200))
 				
 			}
-				waitList(finish())
+			waitList(finish())
 		}
 		change_character("rato") 
         setUpQuestion(

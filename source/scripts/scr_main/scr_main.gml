@@ -53,4 +53,4 @@ window_center()
 
 instance_create_depth(0, 0, 0, ma_pause)
 
-if DEBUG {room_goto(rm_question_rato)} else {room_goto(rm_menu)}
+if DEBUG {room_goto(rm_lv12_a)} else {room_goto(rm_menu)}

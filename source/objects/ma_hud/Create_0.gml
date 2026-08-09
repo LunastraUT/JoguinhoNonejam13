@@ -25,6 +25,8 @@ option_list_options = [
 	"sfx:"
 ]
 
+if room == rm_menu || room == rm_creditos {array_delete(option_list_menu, 1, 1)}
+
 option_list = option_list_menu
 
 option_selected = 0

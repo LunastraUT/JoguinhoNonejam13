@@ -1,4 +1,4 @@
-event_inherited()
+ event_inherited()
 
 spd = 1
 j_height = 2
@@ -69,20 +69,17 @@ jump = function(_amount, _qnt_pulo = 1)
 }
 
 
-move = function(_amount, _spd = 1)
+move = function(_amount)
 {
 	return {
 		setup : false,
 		amount : _amount,
-		newspd : _spd,
 		caller : id,
 		func : function(self)
 		{
 			if (!self.setup)
 			{
 				self.x_old = self.caller.x
-				if self.caller.spd !=self.newspd {self.caller.image_speed = self.newspd}
-				self.caller.spd = self.newspd
 				
 				self.setup = true
 			}

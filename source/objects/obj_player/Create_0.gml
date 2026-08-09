@@ -24,11 +24,12 @@ morte = function()
 
 //Animations
 	preloaded_animations = {
-		idle: spr_gato_idle,
-		walk: spr_gato_walk,
-		fall: spr_gato_fall,
-		jump: spr_gato_jump,
-		dead: spr_gato_dead
+		"idle": spr_gato_idle,
+		"walk": spr_gato_walk,
+		"fall": spr_gato_fall,
+		"jump": spr_gato_jump,
+		"dead": spr_gato_dead,
+		"dance": spr_gato_flagdance
 	}
 //
  
@@ -201,22 +202,16 @@ states[? "jumping"] = {
 
 states[? "levelend"] = {
 	create: function() {
-		playAnim("idle", true)
+		playAnim("dance", true)
 		action_timer = 0
 		hsp = 0
+		vsp = 0
 	},
 	update: function() {
-		skew = lerp(skew, 0, 0.1)
 		action_timer++
 		
 		if action_timer > 100 {
-			if x > room_width+30 {
-				room_goto(rm_choice)
-			} else {
-				looking_at = 1
-				hsp = 1
-				playAnim("walk", true)
-			}
+			room_goto(rm_creditos)
 		}
 	},
 	leave: function() {

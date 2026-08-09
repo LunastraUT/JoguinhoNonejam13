@@ -2,6 +2,8 @@
 sprite_index = spr_bandeira_off;
 active = false;
 
+triggered = false
+
 function checkForBALLS(_bals) {
 	
 	if !instance_exists(_bals){
