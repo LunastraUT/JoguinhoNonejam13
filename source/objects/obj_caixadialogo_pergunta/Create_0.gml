@@ -2,6 +2,8 @@ global_pos = [room_width/2, y]
 
 treco = 0
 
+framedamaozinha = 0;
+
 options = [
 	{
 		text: "nada"

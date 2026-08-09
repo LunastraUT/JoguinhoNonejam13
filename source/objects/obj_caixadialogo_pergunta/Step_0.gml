@@ -20,6 +20,8 @@ option_index = clamp(option_index, 0, 1)
 
 treco += (1 / 60) * 5
 
+framedamaozinha += (1 / 60) * 6
+
 image_alpha = alpha
 alpha = lerp(alpha, 1, 0.1)
 y = lerp(y, y_target, 0.1)

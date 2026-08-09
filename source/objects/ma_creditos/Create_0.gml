@@ -11,9 +11,9 @@ show_timer = show_timer_max
 grrrrr = ""
 ababa = false
 texts = [
-	"Jogo feito para a NoneJam 13 do tema \nREACAO EM CADEIA ou\nEFEITO BORBOLETA"
-	, 
-	"O jogo ainda nao terminou\nvoce pode voltar e fazer outro caminho!"
+    "Jogo feito para a NoneJam 13 do tema \nREACAO EM CADEIA ou\nEFEITO BORBOLETA"
+    , 
+    "experimente tentar outros caminhos se quiser"
 ]
 
 text_index = 0
@@ -25,23 +25,26 @@ typing = 0
 timer = 0
 time_for_next = 5
 
+tem_todos = true
 for(var _i = 0; _i < array_length(global.finais)-1; _i++) {
-	if global.finais[_i] == 0 {continue}
-	
-	texts = [
-		"Jogo feito para a NoneJam 13 do tema \nREACAO EM CADEIA ou\nEFEITO BORBOLETA"
-		, 
-		"Parabens! \nvoce fez todos caminhos possiveis!"
-	]
+    if global.finais[_i] == 0 {tem_todos = false}
+}
+
+if tem_todos {
+    texts = [
+        "Jogo feito para a NoneJam 13 do tema \nREACAO EM CADEIA ou\nEFEITO BORBOLETA"
+        , 
+        "Parabens! \nvoce fez todos caminhos possiveis!"
+    ]    
 }
 
 reset = function() {
-	finished = false
-	
-	text = texts[text_index]
-	dialoguestring = ""
-	max_typing = string_length(text)
-	typing = 0 
-	timer = 0
+    finished = false
+    
+    text = texts[text_index]
+    dialoguestring = ""
+    max_typing = string_length(text)
+    typing = 0 
+    timer = 0
 }
 reset()

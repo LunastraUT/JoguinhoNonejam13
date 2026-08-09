@@ -70,6 +70,26 @@ finish = function() {
 	}
 }
 
+finishurso = function() {
+	return {
+		setup: false,
+		caller: id,
+		func : function(self)
+		{
+			if (!self.setup)
+			{
+				global.finais[7] = 1
+		
+				global.world = global.levels[? "world1a"]
+				global.level = global.world[0]
+				transRights(rm_creditos)
+			}
+			
+			return true
+		}
+	}
+}
+
 opcoes = ["Sim", "Não"]
 escolha = 0
 resposta = ["ebaa", "affff"]
@@ -249,8 +269,9 @@ switch(global.question_data) {
 				
 				waitList(npc.move(25))
 				waitList(wait(1))
+				if escolha == 0 {waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))}
 				waitList(player.move(200))
-				waitList(finish())
+				waitList(finishurso())
 				
 				world_to_go[0] = "world4h"
 			}

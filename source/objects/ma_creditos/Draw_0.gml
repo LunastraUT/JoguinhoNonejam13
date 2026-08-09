@@ -1,3 +1,4 @@
+draw_set_colour(c_white)
 draw_set_font(fnt_options)
 draw_set_halign(fa_center)
 
@@ -26,3 +27,4 @@ draw_set_halign(fa_right)
 draw_text(room_width-70, _y-10, "yoisabo")
 
 draw_set_font(fnt_main)
+draw_set_halign(fa_left)
