@@ -358,7 +358,6 @@
     {"roomId":{"name":"rm_lv7_c","path":"rooms/rm_lv7_c/rm_lv7_c.yy",},},
     {"roomId":{"name":"rm_lv7_b","path":"rooms/rm_lv7_b/rm_lv7_b.yy",},},
     {"roomId":{"name":"rm_lv8_c","path":"rooms/rm_lv8_c/rm_lv8_c.yy",},},
-    {"roomId":{"name":"rm_lv9_c","path":"rooms/rm_lv9_c/rm_lv9_c.yy",},},
     {"roomId":{"name":"rm_lv10_b","path":"rooms/rm_lv10_b/rm_lv10_b.yy",},},
     {"roomId":{"name":"rm_lv10_a","path":"rooms/rm_lv10_a/rm_lv10_a.yy",},},
     {"roomId":{"name":"rm_lv11_c","path":"rooms/rm_lv11_c/rm_lv11_c.yy",},},
@@ -394,6 +393,7 @@
     {"roomId":{"name":"rm_lv13","path":"rooms/rm_lv13/rm_lv13.yy",},},
     {"roomId":{"name":"rm_question_urso","path":"rooms/rm_question_urso/rm_question_urso.yy",},},
     {"roomId":{"name":"rm_creditos","path":"rooms/rm_creditos/rm_creditos.yy",},},
+    {"roomId":{"name":"rm_lv9_c","path":"rooms/rm_lv9_c/rm_lv9_c.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
