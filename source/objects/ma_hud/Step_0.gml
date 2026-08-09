@@ -16,7 +16,7 @@ else {
 			case "retomar": unpause() break;
 			case "reiniciar nivel": transRights(room) unpause() break;
 			case "configurar": change_list(option_list_options) break;	
-			case "sair": game_restart() break;
+			case "sair": game_end() break;
 			
 			case "voltar": change_list(option_list_menu) break;
 			case "musica:": 

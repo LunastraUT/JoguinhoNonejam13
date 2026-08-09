@@ -127,7 +127,7 @@ global.levels = ds_map_create()
 	    { // 12a
 	        room_level: rm_lv12_a,
 	        go_to: rm_cutscene_final,
-	        question_data: "A"
+	        question_data: 0
 	    },
 	]
 	global.levels[? "world4b"] = [ 
@@ -142,7 +142,7 @@ global.levels = ds_map_create()
 	    { // 12b
 	        room_level: rm_lv12_b,
 	        go_to: rm_cutscene_final,
-	        question_data: "B"
+	        question_data: 1
 	    },
 	]
 	global.levels[? "world4c"] = [ 
@@ -157,7 +157,7 @@ global.levels = ds_map_create()
 	    { // 12c
 	        room_level: rm_lv12_c,
 	        go_to: rm_cutscene_final,
-	        question_data: "C"
+	        question_data: 2
 	    },
 	]
 	global.levels[? "world4d"] = [ 
@@ -172,7 +172,7 @@ global.levels = ds_map_create()
 	    { // 12d
 	        room_level: rm_lv12_d,
 	        go_to: rm_cutscene_final,
-	        question_data: "D"
+	        question_data: 3
 	    },
 	]
 	global.levels[? "world4e"] = [ 
@@ -187,7 +187,7 @@ global.levels = ds_map_create()
 	    { // 12e
 	        room_level: rm_lv12_e,
 	        go_to: rm_cutscene_final,
-	        question_data: "E"
+	        question_data: 4
 	    },
 	]
 	global.levels[? "world4f"] = [ 
@@ -202,7 +202,7 @@ global.levels = ds_map_create()
 	    { // 12f
 	        room_level: rm_lv12_f,
 	        go_to: rm_cutscene_final,
-	        question_data: "F"
+	        question_data: 5
 	    },
 	]
 	global.levels[? "world4g"] = [ 
@@ -217,7 +217,7 @@ global.levels = ds_map_create()
 	    { // 12g
 	        room_level: rm_lv12_g,
 	        go_to: rm_cutscene_final,
-	        question_data: "G"
+	        question_data: 6
 	    },
 	]
 	global.levels[? "world4h"] = [ 
@@ -232,7 +232,7 @@ global.levels = ds_map_create()
 	    { // 12h
 	        room_level: rm_lv12_h,
 	        go_to: rm_cutscene_final,
-	        question_data: "H"
+	        question_data: 7
 	    },
 	]
 #endregion

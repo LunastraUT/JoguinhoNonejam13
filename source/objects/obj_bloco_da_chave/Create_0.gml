@@ -1,8 +1,27 @@
 destroying = false
-if (instance_number(obj_chave_do_bloco) == 1) {
-	destroy_time = obj_chave_do_bloco.destroy_time;
-} else {
-	destroy_time = 8;
+
+destroy_time = 8;
+
+switch(room) {
+    case rm_lv7_d:
+        destroy_time = 16;
+    break;
+    case rm_lv8_d:
+        destroy_time = 8;
+    break;
+    case rm_lv9_d:
+        destroy_time = 10;
+    break;
+    case rm_lv10_g:
+        destroy_time = 8;
+    break;
+    case rm_lv11_g:
+        destroy_time = 8;
+    break;
+    case rm_lv12_g:
+        destroy_time = 8;
+    break;
+    
 }
 
 
@@ -28,6 +47,6 @@ function morteinstantanea() { //deve ter um jeito melhor mas eu to com sono
     b = instance_place(x, y + tam, obj_bloco_da_chave)
     if (b != noone) b.alarm[0] = destroy_time
 
-	spawnParticles(x+sprite_width/2, y+sprite_height/2, "roundpuff", 3)
+    spawnParticles(x+sprite_width/2, y+sprite_height/2, "roundpuff", 3)
     instance_destroy()
 }

@@ -2,6 +2,8 @@ randomise()
 
 global.bolos = 0
 
+global.finais = [0, 0, 0, 0, 0, 0, 0, 0]
+
 global.particle_max = 200
 global.collisions = [
 	obj_colisor, 
@@ -53,4 +55,4 @@ window_center()
 
 instance_create_depth(0, 0, 0, ma_pause)
 
-if DEBUG {room_goto(rm_lv12_a)} else {room_goto(rm_menu)}
+if DEBUG {room_goto(rm_debug)} else {room_goto(rm_menu)}

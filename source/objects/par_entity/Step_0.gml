@@ -20,7 +20,7 @@ if (ds_map_exists(states, current_state)) {
 }
 
 underwater = place_meeting(x, y, obj_aguinha)
-if underwater {
+if underwater && !ignore_collision {
 	spd = spd_underwater 
 	grav = grav_underwater
 	vsp_max = lerp(vsp_max, vsp_max_underwater, 0.15);

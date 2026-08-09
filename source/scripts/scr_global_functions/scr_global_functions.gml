@@ -1,4 +1,4 @@
-function structTry(_struct, _name, _default)
+ function structTry(_struct, _name, _default)
 {
     return variable_struct_exists(_struct, _name)
         ? variable_struct_get(_struct, _name)

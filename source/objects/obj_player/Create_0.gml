@@ -1,8 +1,10 @@
-  // Inherit the parent event
+   // Inherit the parent event
 event_inherited();
 
 depth -= 50
 keyPerLevelValue = 0; //pra aumentar o pitch das chaves
+
+ovos = []
 
 if !instance_exists(ma_hud) {instance_create_depth(0, 0, 0, ma_hud)}
 
@@ -200,18 +202,25 @@ states[? "jumping"] = {
 	}
 }
 
+grr = false
 states[? "levelend"] = {
 	create: function() {
 		playAnim("dance", true)
 		action_timer = 0
 		hsp = 0
 		vsp = 0
-	},
+		
+		global.finais[global.level.question_data] = 1
+		
+		global.world = global.levels[? "world1a"]
+		global.level = global.world[0]
+	}, 
 	update: function() {
 		action_timer++
 		
-		if action_timer > 100 {
-			room_goto(rm_creditos)
+		if action_timer > 100 && !grr {
+			grr = true
+			transRights(rm_creditos)
 		}
 	},
 	leave: function() {
@@ -242,6 +251,7 @@ states[? "morreudasilva"] = {
 		
 		ignore_collision = true
 		playSFX(snd_death)
+		
 	},
 	update: function() {
 		update_air_physics()
