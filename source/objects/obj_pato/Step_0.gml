@@ -1,48 +1,25 @@
-switch(state) {
-	case "inactive":
-		checkForBALLS(obj_ovo);
-	break;
-	case "active":
-			if jacomecaabertopo == false { //pq ai tipo ele nao faz o TUNG(sahur) quando começa a room e n tem chave
-			//isso aqui é um mamão na roda heh				eh um oq??????
-			if sprite_index != spr_porta_on {
-				playSFX(snd_portaabre)
-				sprite_index = spr_porta_on;
-				fakexscale = 0.5;
-				fakeyscale = 1.5;
+multiplyxscale = obj_player.x < x ? -1 : 1;
+
+if place_meeting(x, bbox_top, obj_player) && obj_player.vsp > 0 && !obj_player.ignore_collision {
+		if obj_player.vsp >= 4 {
+			if sprite_index != spr_chip_dies{
+				sprite_index = spr_chip_dies;
+				playSFX(snd_splat, false, 0, global.sfx_volume, 0, 1.8)
 			}
-	
-			//faça o lerp meu filho
-			fakexscale = lerp(fakexscale, 1, 0.15);
-			fakeyscale = lerp(fakeyscale, 1, 0.15);
-	
-			}
-		if place_meeting(x, y, obj_player) && obj_player.final_vsp = 0 { //gambiarra preguica
-			state = "entering"
-		}
-	break;
-	case "entering": 
-		if sprite_index != spr_porta_end {
-			sprite_index = spr_porta_end;
-			obj_player.changeState("enterdoor")
-			playSFX(snd_levelend)
-		}
+			canbebeaten = false;
+		} else {
 		
-		//faça o lerp meu filho
-		fakexscale = lerp(fakexscale, 1, 0.15);
-		fakeyscale = lerp(fakeyscale, 1, 0.15);
-				
-		if image_index >= image_number-1 {
-			levarparaoproximolevel(next_level)
-			
-			state = "cacetada"
+			if canbebeaten == true {
+				//boing
+				playSFX(snd_mola, false, 0, global.sfx_volume, 0, 1.5)
+				obj_player.vsp = -boing_height
+				image_index = 0;
+				sprite_index = spr_chip_ouch;
+				fakexscale = 1.25;
+				fakeyscale = 0.75;
 		}
-	break;
+		}
 }
 
-if sprite_index = spr_porta_end && image_index >= image_number-1 {
-	image_index = image_number-1
-}
-
-image_xscale = fakexscale;
-image_yscale = fakeyscale;
+fakexscale = lerp(fakexscale, 1, 0.15);
+fakeyscale = lerp(fakeyscale, 1, 0.15);
