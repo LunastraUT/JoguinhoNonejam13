@@ -3,9 +3,9 @@ costhing = cos(current_time*0.002)
 
 //nossa que sono da disgraça ARGHRGH
 if collected == true {
-	if sprite_index != spr_chave_pega {
+	if sprite_index != collected_sprite {
 		image_index = 0;
-		sprite_index = spr_chave_pega;
+		sprite_index = collected_sprite;
 	
 		y -= 1;
 	}

@@ -26,23 +26,24 @@ enum transes {
     OUT
 }
 
-global.gatos = {
-	rosa:      make_color_rgb(255, 170, 255),
-	ciano:     make_color_rgb(85, 255, 255),
-	azul:      make_color_rgb(0, 170, 255),
-	verde:     make_color_rgb(85, 170, 85),
-	amarelo:   make_color_rgb(255, 170, 0),
-	vermelho:  make_color_rgb(255, 0, 85),
-	roxo:      make_color_rgb(170, 85, 170),
-	preto:     make_color_rgb(85, 85, 170)
-}
+global.gatos = [
+	make_color_rgb(255, 170, 255),
+	make_color_rgb(85, 255, 255),
+	make_color_rgb(0, 170, 255),
+	make_color_rgb(85, 170, 85),
+	make_color_rgb(255, 170, 0),
+	make_color_rgb(255, 0, 85),
+	make_color_rgb(170, 85, 170),
+	make_color_rgb(85, 85, 170)
+]
+global.color_index = 0
 
 global.collectables_data = {
 	bolo: {points: 10, harmful: false},
 	cookiemorango: {points: 10, harmful: false}
 }
 
-#macro DEBUG true
+#macro DEBUG false
 #macro RES_W 320
 #macro RES_H 180
  
@@ -56,3 +57,9 @@ window_center()
 instance_create_depth(0, 0, 0, ma_pause)
 
 if DEBUG {room_goto(rm_debug)} else {room_goto(rm_menu)}
+
+function mudaCor() {
+	global.color_index++
+	global.color_index = clamp(global.color_index, 0, array_length(global.gatos)-1)
+	if global.color_index == array_length(global.gatos)-1 {global.color_index = 0}
+}

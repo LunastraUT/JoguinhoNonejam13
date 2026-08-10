@@ -4,3 +4,5 @@ fakeyscale = 1;
 multiplyxscale = 1;
 
 canbebeaten = true;
+
+spawned_key = false

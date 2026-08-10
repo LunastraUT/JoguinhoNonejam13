@@ -20,3 +20,5 @@ function applygravityHELLYEAHBABY() {
 	y += vsp * grav;
 	
 }
+
+collected_sprite = spr_chave_pega

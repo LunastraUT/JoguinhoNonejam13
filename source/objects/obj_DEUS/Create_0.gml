@@ -1,3 +1,4 @@
+stopMusic()
 switch(room) {
 	 case rm_menu:
         playMusic(mus_menu)

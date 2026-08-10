@@ -35,7 +35,7 @@ morte = function()
 	}
 //
  
-cor_gato = global.gatos.rosa
+cor_gato = global.gatos[global.color_index]
 
 draw = function(_blend = image_blend, _alpha = image_alpha) {
 	draw_sprite_ext_skew(sprite_index, image_index, x, y, xscale * looking_at, yscale, fake_angle, skew, _blend, _alpha)
@@ -211,9 +211,10 @@ states[? "levelend"] = {
 		vsp = 0
 		
 		global.finais[global.level.question_data] = 1
-		
+		mudaCor()
 		global.world = global.levels[? "world1a"]
 		global.level = global.world[0]
+		global.bolos = 0
 	}, 
 	update: function() {
 		action_timer++

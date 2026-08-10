@@ -78,8 +78,9 @@ finishurso = function() {
 		{
 			if (!self.setup)
 			{
+				mudaCor()
 				global.finais[7] = 1
-		
+				global.bolos = 0
 				global.world = global.levels[? "world1a"]
 				global.level = global.world[0]
 				transRights(rm_creditos)
@@ -113,7 +114,7 @@ camera.cam_state = camera_states.quotes
 player = instance_create_layer(-50, 130, "Entities", obj_cutscenenpc)
 npc = instance_create_layer(room_width+50, 130, "Entities" ,obj_cutscenenpc)
 npc.olhar = player
-npc.cor_gato = global.gatos.amarelo
+npc.cor_gato = global.gatos[0]
 
 waitList(mix([player.move(180), npc.move(-180)]))
 waitList(wait(1))
@@ -249,13 +250,20 @@ switch(global.question_data) {
 			} else {
 				if global.bolos >= 1 {
 					npc.preloaded_animations.bite = spr_ursao_bite2
-					player.preloaded_animations.idle = spr_gato_cake
-					npc.playAnim("bite", false, 3, true)
-					player.playAnim("idle", false)
-					waitList(wait(1))
-					waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
 					
 					waitList(wait(1))
+					
+					waitList(player.playbosta("cake", false, 3, true))
+					
+					waitList(wait(0.2))
+					
+					waitList(npc.move(-10))
+					waitList(npc.playbosta("bite", false, 3, true))
+					
+					waitList(wait(1))
+					waitList(npc.playbosta("idle", false, 3, true))
+					waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
+					
 					waitList(player.move(200))
 					waitList(finish())
 				} else {
@@ -267,10 +275,11 @@ switch(global.question_data) {
 				npc.preloaded_animations.bite = spr_ursao_bite
 				npc.comer = player
 				
-				waitList(npc.move(25))
+				if escolha == 1 {
+					waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))
+				}
+				waitList(npc.move(-40))
 				waitList(wait(1))
-				if escolha == 0 {waitList(spawnDiabox(resposta[escolha], npc, [xx+70, yy], true))}
-				waitList(player.move(200))
 				waitList(finishurso())
 				
 				world_to_go[0] = "world4h"
