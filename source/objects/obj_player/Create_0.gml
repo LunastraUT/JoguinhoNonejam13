@@ -4,6 +4,8 @@ event_inherited();
 depth -= 50
 keyPerLevelValue = 0; //pra aumentar o pitch das chaves
 
+bolos_holding = 0
+
 ovos = []
 
 hud = noone
@@ -12,6 +14,9 @@ if !instance_exists(ma_hud) {hud = instance_create_depth(0, 0, 0, ma_hud)}
 morte = function() 
 {
 	if current_state != "morreudasilva" {
+		global.bolos -= bolos_holding
+		bolos_holding = 0
+		
 		changeState("morreudasilva")
 	}	
 }

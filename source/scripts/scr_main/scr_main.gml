@@ -1,4 +1,6 @@
  randomise()
+ 
+global.paused = false
 
 global.bolos = 0
 

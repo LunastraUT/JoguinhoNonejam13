@@ -67,6 +67,8 @@ function contador_de_bolo() constructor {
 	state = "hidden"
 	time_for_hide = 0
 	
+	bolos = global.bolos
+	
 	step = function() {
 		if state == "hidden" {
 			x = off_screen_pos
@@ -75,15 +77,16 @@ function contador_de_bolo() constructor {
 		switch(state)
 		{
 			case "hide":
-				move_speed = 0.01
+				move_speed = 0.05
 				
 				move_pos = off_screen_pos
 			break;
 			case "show":
-				move_speed = 0.1
+				move_speed = 0.15
 			
 				move_pos = on_screen_pos
 				if x > on_screen_pos-1 {
+					bolos = global.bolos
 					time_for_hide -= 1
 					if time_for_hide <= 0 {
 						state = "hide"
@@ -96,15 +99,27 @@ function contador_de_bolo() constructor {
 	
 	show = function() {
 		state = "show"
-		time_for_hide = 30
+		time_for_hide = 60
 	}	
 	
 	draw = function() {
-		draw_set_halign(fa_left)
-		draw_set_colour(c_white)
+		if !ma_hud.is_paused {
+			draw_set_colour($550000)
+			draw_rectangle(0, y-5, x+25, y+5, false)
 	
-		draw_sprite(spr_bolo, 0, x, y+sin(current_time*0.002)*1.5)
-		draw_text(x+10, y, global.bolos)
+			draw_sprite(spr_bolo, 0, x, y+sin(current_time*0.002)*1.5)
+			
+			draw_set_colour(c_white)
+			draw_set_halign(fa_left)
+			draw_set_valign(fa_center)
+			draw_text(x+10, y, bolos)
+		} else {
+			draw_sprite(spr_bolo, 0, RES_W/2, y)
+			
+			draw_set_halign(fa_center)
+			draw_set_colour(c_white)
+			draw_text(RES_W/2, y+8, bolos)
+		}
 	}
 }
 

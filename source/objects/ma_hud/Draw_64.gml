@@ -33,7 +33,7 @@ if is_paused
 	
 
 	draw_set_colour(-1)
-	draw_set_alpha(-1)
+	draw_set_alpha(1)
 	draw_set_halign(-1)
 	draw_set_valign(-1)
 	
@@ -47,4 +47,6 @@ if is_paused
 
 conta_bolo.draw()
 
+draw_set_halign(-1)
+draw_set_colour(-1)
 draw_set_font(fnt_main)
