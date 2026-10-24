@@ -1,4 +1,7 @@
 display_set_gui_size(RES_W, RES_H)
+
+draw_set_font(fnt_options)
+
 if is_paused
 {
 	draw_set_colour($550000)
@@ -21,8 +24,7 @@ if is_paused
 
 		var _color = _i == option_selected ? c_white : $AA5555
 		draw_set_colour(_color)
-		
-		draw_set_font(fnt_options)
+	
 		draw_text(
 			_x,
 			_y+_sep*_i, string_upper(option_list[_i]) + _extra
@@ -30,13 +32,10 @@ if is_paused
 	}
 	
 
-	// resetando o texto pro default vai que da bosta neh
-	draw_set_font(fnt_main)
-	draw_set_colour(c_black)
-	draw_set_alpha(1.0)
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	// sei la cara	
+	draw_set_colour(-1)
+	draw_set_alpha(-1)
+	draw_set_halign(-1)
+	draw_set_valign(-1)
 	
 	for(var _i = 0; _i < array_length(global.finais); _i++) {
 		var _pegou = global.finais[_i]
@@ -45,3 +44,7 @@ if is_paused
 		draw_sprite(spr_bandeirinha_final, _pegou, _xx, room_height-25)	
 	}
 }
+
+conta_bolo.draw()
+
+draw_set_font(fnt_main)

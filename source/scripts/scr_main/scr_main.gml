@@ -1,4 +1,4 @@
-randomise()
+ randomise()
 
 global.bolos = 0
 

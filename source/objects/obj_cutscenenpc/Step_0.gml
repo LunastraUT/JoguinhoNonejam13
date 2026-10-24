@@ -23,7 +23,7 @@ if grounded {
         playAnim("walk", true)
     } else {
         skew_max = 0
-        playAnim("idle", false, 0)
+        playAnim("idle", true, 0)
         
         if olhar != noone {
             looking_at = -sign(x-olhar.x)    

@@ -1,6 +1,7 @@
 if other.collected == false { //coleta
+	hud.conta_bolo.show()
 	
-		other.collected = true;
+	other.collected = true;
 	
 	if other.harmful == false { //MORRE
 		

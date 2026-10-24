@@ -55,3 +55,57 @@ change_list = function(_options) {
 	option_list = _options
 	option_selected = 0
 }
+
+function contador_de_bolo() constructor {
+	x = 20
+	y = 20
+	on_screen_pos = 20
+	off_screen_pos = -40
+	move_pos = off_screen_pos
+	move_speed = 0.1
+
+	state = "hidden"
+	time_for_hide = 0
+	
+	step = function() {
+		if state == "hidden" {
+			x = off_screen_pos
+			return
+		}
+		switch(state)
+		{
+			case "hide":
+				move_speed = 0.01
+				
+				move_pos = off_screen_pos
+			break;
+			case "show":
+				move_speed = 0.1
+			
+				move_pos = on_screen_pos
+				if x > on_screen_pos-1 {
+					time_for_hide -= 1
+					if time_for_hide <= 0 {
+						state = "hide"
+					}
+				}
+			break;
+		}
+		x = lerp(x, move_pos, move_speed)
+	}
+	
+	show = function() {
+		state = "show"
+		time_for_hide = 30
+	}	
+	
+	draw = function() {
+		draw_set_halign(fa_left)
+		draw_set_colour(c_white)
+	
+		draw_sprite(spr_bolo, 0, x, y+sin(current_time*0.002)*1.5)
+		draw_text(x+10, y, global.bolos)
+	}
+}
+
+conta_bolo = new contador_de_bolo()

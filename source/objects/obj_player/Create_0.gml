@@ -6,7 +6,8 @@ keyPerLevelValue = 0; //pra aumentar o pitch das chaves
 
 ovos = []
 
-if !instance_exists(ma_hud) {instance_create_depth(0, 0, 0, ma_hud)}
+hud = noone
+if !instance_exists(ma_hud) {hud = instance_create_depth(0, 0, 0, ma_hud)}
 
 morte = function() 
 {

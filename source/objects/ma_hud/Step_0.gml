@@ -1,3 +1,5 @@
+conta_bolo.step()
+
 if !is_paused {
 	if INPUT_PAUSE {
 		pause();
